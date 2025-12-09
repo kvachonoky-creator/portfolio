@@ -7,23 +7,27 @@ import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 
 export const AboutMe = () => {
     return (
-        <Container>
+        <StyledAboutMe>
             <FlexWrapper direction="column">
-                <h1>frontend developer</h1>
+                <StyledMainTitle>frontend developer</StyledMainTitle>
                 <SectionTitle title={"Hello, my name is Yaroslau Kvachonak"}></SectionTitle>
                 <SectionText title={"About me"}></SectionText>
                 <Button title={"Projects"}/>
                 <Button title={"LinkedIn"}/>
             </FlexWrapper>
             <Photo src="" alt=""/>
-        </Container>
+        </StyledAboutMe>
     );
 };
 
-const Container = styled.section`
+const StyledAboutMe = styled.section`
     display: flex;
     justify-content: space-around;
     background-color: green;
+`
+
+const StyledMainTitle = styled.h1`
+
 `
 
 const Photo = styled.img`

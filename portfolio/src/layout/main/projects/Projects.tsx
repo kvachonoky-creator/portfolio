@@ -1,7 +1,26 @@
+import styled from "styled-components";
+import { SectionTitle } from "../../../components/sectionTitle/SectionTitle";
+import { ProjectCard } from "../../../components/projectCard/ProjectCard";
+
+
+
+
 export const Projects = () => {
     return (
-        <div>
+        <StyledProjects>
+            <SectionTitle title={"Projects"} />
+            <ProjectCard/>
+            <ProjectCard/>
+            <ProjectCard/>
+        </StyledProjects>
 
-        </div>
     );
 };
+
+
+const StyledProjects = styled.section`
+display: flex;
+flex-direction:column;
+align-items: center;
+background-color: blue; 
+`
