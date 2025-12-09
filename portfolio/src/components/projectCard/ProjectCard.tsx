@@ -10,7 +10,7 @@ export const ProjectCard = () => {
                 <FlexWrapper gap="24px" direction="column">
                     <ProjectName>Project name</ProjectName>
                     <SectionText title={"lorem 123321"} />
-                    <Button title={"ViewProject"} />
+                    <Button title={"ViewProject"} type="submit"/>
                 </FlexWrapper>
                 <Picture />
             </FlexWrapper>

@@ -30,5 +30,4 @@ const StyledSkills = styled.section`
     display: flex;
     flex-direction: column;
     gap: 74px;
-    background-color: red;
 `

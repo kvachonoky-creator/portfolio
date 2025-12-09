@@ -1,18 +1,18 @@
 import styled from "styled-components";
 
-export const Menu = () => {
+type menuTitleProps = {
+    menuItem: Array<string>
+}
+
+export const Menu = ({ menuItem }: menuTitleProps) => {
     return (
         <StyledMenu>
             <ul>
-                <li>
-                    <a href="">About</a>
-                </li>
-                <li>
-                    <a href="">Project</a>
-                </li>
-                <li>
-                    <a href="">Contacts</a>
-                </li>
+                {menuItem.map((item, index) => (
+                    <ListItem key={index}>
+                        <Link href="#">{item}</Link>
+                    </ListItem >
+                ))}
             </ul>
         </StyledMenu>
     );
@@ -26,3 +26,14 @@ const StyledMenu = styled.nav`
     }
 `
 
+const ListItem = styled.li`
+
+`
+
+const Link = styled.a`
+font-family: Raleway;
+font-weight: 500;
+font-size: 18px;
+line-height: 156%;
+color: #25282b;
+`
