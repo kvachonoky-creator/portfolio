@@ -13,5 +13,4 @@ export const SectionTitle = (props: SectionTitleProps) => {
 };
 
 const SectiontitleStyled = styled.h2`
-    margin: 0 auto;
 `

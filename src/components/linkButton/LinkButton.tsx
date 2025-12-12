@@ -6,7 +6,7 @@ type ButtonProps = {
 }
 
 
-export const Button = (props: ButtonProps) => {
+export const LinkButton = (props: ButtonProps) => {
     return (
         <ButtonStyled>
             {props.title}
@@ -15,5 +15,5 @@ export const Button = (props: ButtonProps) => {
 };
 
 
-const ButtonStyled = styled.button`
+const ButtonStyled = styled.a`
 `

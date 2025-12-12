@@ -1,25 +1,21 @@
-import { SectionTitle } from "../../../components/sectionTitle/SectionTitle.tsx";
+import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import styled from "styled-components";
-import { FlexWrapper } from "../../../components/flexWrapper/FlexWrapper.tsx";
-import { Icons } from "../../../components/icons/Icons.tsx";
+import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
+import {Icons} from "../../../components/icons/Icons.tsx";
 
 export const Skills = () => {
+
+    const skillsIcon: Array<string> = ["vsCode", "js", "typescript", "react", "redux", "git", "bootstrap", "sass", "css", "html", "greensock", "github"]
+
     return (
         <StyledSkills>
-            <SectionTitle title={"Skills"} />
+            <SectionTitle title={"Skills"}/>
             <FlexWrapper wrap={"wrap"} gap={"96px"}>
-                <Icons iconId={"vsCode"} />
-                <Icons iconId={"js"} />
-                <Icons iconId={"typescript"} />
-                <Icons iconId={"react"} />
-                <Icons iconId={"redux"} />
-                <Icons iconId={"git"} />
-                <Icons iconId={"bootstrap"} />
-                <Icons iconId={"sass"} />
-                <Icons iconId={"css"} />
-                <Icons iconId={"html"} />
-                <Icons iconId={"greensock"} />
-                <Icons iconId={"github"} />
+                {skillsIcon.map((icon, i) => {
+                    return (
+                        <Icons key={i} aria-label={icon} iconId={icon}/>
+                    )
+                })}
             </FlexWrapper>
         </StyledSkills>
     );

@@ -1,8 +1,8 @@
 import { Container } from "../../components/container/Container.ts";
 import { FlexWrapper } from "../../components/flexWrapper/FlexWrapper.tsx";
-import { Logo } from "../../components/logo/Logo.tsx";
 import { Menu } from "../../components/menu/Menu.tsx";
 import styled from "styled-components";
+import {Icons} from "../../components/icons/Icons.tsx";
 
 
 export const Header = () => {
@@ -13,7 +13,7 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify="space-between" align="center">
-                    <Logo />
+                    <Icons iconId={"logo"} width={"300px"}/>
                     <Menu menuItem={menuTitle}/>
                 </FlexWrapper>
             </Container>
