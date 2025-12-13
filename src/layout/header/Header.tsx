@@ -13,7 +13,9 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify="space-between" align="center">
-                    <Icons iconId={"logo"} width={"300px"}/>
+                    <LogoLink>
+                        <Icons iconId={"logo"} width={"300px"}/>
+                    </LogoLink>
                     <Menu menuItem={menuTitle}/>
                 </FlexWrapper>
             </Container>
@@ -29,4 +31,9 @@ const StyledHeader = styled.header`
     //left: 0;
     //right: 0;
     //z-index: 999;
+`
+
+const LogoLink = styled.a`
+    display: flex;
+    align-items: center;
 `

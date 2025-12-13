@@ -2,6 +2,7 @@ import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
 import styled from "styled-components";
 import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {Icons} from "../../../components/icons/Icons.tsx";
+import {Container} from "../../../components/container/Container.ts";
 
 export const Skills = () => {
 
@@ -9,14 +10,17 @@ export const Skills = () => {
 
     return (
         <StyledSkills>
-            <SectionTitle title={"Skills"}/>
-            <FlexWrapper wrap={"wrap"} gap={"96px"}>
-                {skillsIcon.map((icon, i) => {
-                    return (
-                        <Icons key={i} aria-label={icon} iconId={icon}/>
-                    )
-                })}
-            </FlexWrapper>
+            <Container>
+                <SectionTitle title={"Skills"}/>
+                <FlexWrapper wrap={"wrap"} gap={"96px"}>
+                    {skillsIcon.map((icon, i) => {
+                        return (
+                            <Icons key={i} aria-label={icon} iconId={icon}/>
+                        )
+                    })}
+                </FlexWrapper>
+            </Container>
+
         </StyledSkills>
     );
 };
