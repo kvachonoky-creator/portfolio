@@ -24,12 +24,15 @@ const SectiontitleStyled = styled.h2`
     
     position: relative;
     
-    ::before {
+    &::before {
         position: absolute;
         content: "";
         border-radius: 2px;
         width: 100px;
         height: 4px;
         background: ${theme.colors.accent};
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -4px;
     }
 `

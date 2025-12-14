@@ -13,8 +13,8 @@ export const Header = () => {
         <StyledHeader>
             <Container>
                 <FlexWrapper justify="space-between" align="center">
-                    <LogoLink>
-                        <Icons iconId={"logo"} width={"300px"}/>
+                    <LogoLink href="#">
+                        <Icons  iconId={"logo"} width={"300px"} height={"15px"} viewBox={"0 0 300 15"}/>
                     </LogoLink>
                     <Menu menuItem={menuTitle}/>
                 </FlexWrapper>
@@ -26,6 +26,13 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding: 12px 0;
+    
+    position: relative;
+    
+    &::after {
+        content: "";
+        
+    }
     //position: fixed;
     //top: 0;
     //left: 0;

@@ -4,20 +4,21 @@ import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import photo from "../../../assets/img/myPhoto.webp"
 import {Container} from "../../../components/container/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
+import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 
 export const AboutMe = () => {
     return (
-        <StyledAboutMe>
+        <StyledAboutMe id="AboutMe">
             <Container>
                 <FlexWrapper gap={"92px"}>
                     <FlexWrapper direction="column" gap={"0px"}>
                         <StyledMainTitle>frontend developer</StyledMainTitle>
                         <span><StyledSectionTitle>Hello, my name is Yaroslau Kvachonak</StyledSectionTitle></span>
-                        <StyledMainText>
-                            I am a frontend developer. I have experience in cross-browser adaptive and responsive web application development. I create with TypeScript, React, Redux. I will be glad to join and work with you!</StyledMainText>
+                        <SectionText title={ "I am a frontend developer. I have experience in cross-browser adaptive and responsive web application development. I create with TypeScript, React, Redux. I will be glad to join and work with you!"}
+                           />
                         <FlexWrapper gap="12px">
                             <LinkButton title={"Projects"}/>
-                            <LinkButton title={"LinkedIn"}/>
+                            <LinkButton href={"https://www.linkedin.com/in/kyarek/"} title={"LinkedIn"}/>
                         </FlexWrapper>
                     </FlexWrapper>
                     <Photo src={photo} alt="My photo"/>
@@ -29,6 +30,14 @@ export const AboutMe = () => {
 
 const StyledAboutMe = styled.section`
     margin-bottom: 144px;
+    
+    p {
+        font-size: 24px;
+        margin-bottom: 32px;
+        max-width: 486px;
+        width: 100%;
+    }
+    
 `
 
 const StyledMainTitle = styled.h1`
@@ -50,20 +59,10 @@ const StyledSectionTitle = styled.h2`
     margin-bottom: 32px;
 `
 
-const StyledMainText = styled.p`
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 1.5;
-    color: ${theme.colors.textFont};
-    margin-bottom: 32px;
-    max-width: 486px;
-    width: 100%;
-`
 
 const Photo = styled.img`
     width: 720px;
     height: 629px;
-    object-fit: cover;
+    object-fit: contain;
     margin-bottom: 144px;
 `

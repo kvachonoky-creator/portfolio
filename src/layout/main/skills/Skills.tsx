@@ -12,7 +12,7 @@ export const Skills = () => {
         <StyledSkills>
             <Container>
                 <SectionTitle title={"Skills"}/>
-                <FlexWrapper wrap={"wrap"} gap={"96px"}>
+                <FlexWrapper wrap={"wrap"} gap={"74px 96px"} justify={"center"}>
                     {skillsIcon.map((icon, i) => {
                         return (
                             <Icons key={i} aria-label={icon} iconId={icon}/>

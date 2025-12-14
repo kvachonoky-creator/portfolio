@@ -4,16 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="13_12">
+    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="14_12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/container/Container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/Container.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/sprite.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/flexWrapper/FlexWrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/flexWrapper/FlexWrapper.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/linkButton/LinkButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/linkButton/LinkButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/menu/Menu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/menu/Menu.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projectCard/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projectCard/ProjectCard.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sectionText/SectionText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sectionText/SectionText.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/sectionTitle/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sectionTitle/SectionTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/projects/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/projects/Projects.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/main/skills/Skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/skills/Skills.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Global.styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Global.styled.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -87,7 +94,8 @@
       <workItem from="1765379160561" duration="18000" />
       <workItem from="1765565865635" duration="33000" />
       <workItem from="1765567161790" duration="6302000" />
-      <workItem from="1765656680595" duration="4745000" />
+      <workItem from="1765656680595" duration="4788000" />
+      <workItem from="1765710940983" duration="16033000" />
     </task>
     <task id="LOCAL-00001" summary="13_12">
       <option name="closed" value="true" />
@@ -113,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1765574002244</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="14_12">
+      <option name="closed" value="true" />
+      <created>1765661498139</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1765661498139</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,7 +137,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="13_12" />
-    <option name="LAST_COMMIT_MESSAGE" value="13_12" />
+    <MESSAGE value="14_12" />
+    <option name="LAST_COMMIT_MESSAGE" value="14_12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

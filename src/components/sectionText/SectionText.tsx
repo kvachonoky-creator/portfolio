@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import {theme} from "../../styles/Theme.ts";
 
 type SectionTextProps = {
     title: string;
@@ -18,5 +19,5 @@ const SectionTextStyled = styled.p`
     font-weight: 400;
     font-size: 18px;
     line-height: 1.5;
-    color: #828282;
+    color: ${theme.colors.textFont};
 `
