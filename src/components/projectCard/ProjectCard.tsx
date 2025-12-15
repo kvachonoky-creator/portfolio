@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { FlexWrapper } from "../flexWrapper/FlexWrapper";
 import { SectionText } from "../sectionText/SectionText";
-import picture from "../../assets/img/072120-ToDoList-Blog.png"
+import picture from "../../assets/img/ToDoListBlog.webp"
 import {LinkButton} from "../linkButton/LinkButton.tsx";
 
 export const ProjectCard = () => {

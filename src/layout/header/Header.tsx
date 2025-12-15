@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../components/flexWrapper/FlexWrapper.tsx";
 import { Menu } from "../../components/menu/Menu.tsx";
 import styled from "styled-components";
 import {Icons} from "../../components/icons/Icons.tsx";
-
+// import {topBorder} from "../../assets/img/topBorder.svg"
 
 export const Header = () => {
 
@@ -30,7 +30,10 @@ const StyledHeader = styled.header`
     position: relative;
     
     &::after {
+        position: absolute;
         content: "";
+        top: 0;
+        right: 0;
         
     }
     //position: fixed;
