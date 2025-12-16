@@ -7,7 +7,7 @@ export const Footer = () => {
     return (
         <StyledFooter>
             <Container>
-                <FlexWrapper direction={"column"} align={"center"}>
+                <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
                     <StyledSocial>
                         <a href={"https://t.me/ya_yareekk"} target={"_blank"}><Icons iconId="tg" aria-label={"telegram"} width="48px" height="48px"
                                   viewBox="0 0 40 40"/></a>

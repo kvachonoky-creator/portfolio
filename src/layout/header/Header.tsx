@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../components/flexWrapper/FlexWrapper.tsx";
 import { Menu } from "../../components/menu/Menu.tsx";
 import styled from "styled-components";
 import {Icons} from "../../components/icons/Icons.tsx";
-// import {topBorder} from "../../assets/img/topBorder.svg"
+// import {topBorder} from "../../assets/img/yellow-bg.svg"
 
 export const Header = () => {
 
@@ -32,8 +32,11 @@ const StyledHeader = styled.header`
     &::after {
         position: absolute;
         content: "";
-        top: 0;
-        right: 0;
+        //background-image: url("../../assets/img/yellow-bg.svg");
+        //top: 0;
+        //right: 0;
+        //width: 100%;
+        //height: 100%;
         
     }
     //position: fixed;
