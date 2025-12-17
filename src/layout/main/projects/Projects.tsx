@@ -10,7 +10,7 @@ export const Projects = () => {
         <StyledProjects id="Project">
             <Container>
                 <SectionTitle title={"Projects"}/>
-                <FlexWrapper gap="80px" direction="column" width="100%">
+                <FlexWrapper gap="80px" direction="column">
                     <ProjectCard/>
                     <ProjectCard/>
                     <ProjectCard/>

@@ -2,6 +2,7 @@ import {Icons} from "../../components/icons/Icons.tsx";
 import styled from "styled-components";
 import {Container} from "../../components/container/Container.ts";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
+import bottomBorder from "../../assets/img/bottomBorder.svg?url"
 
 export const Footer = () => {
     return (
@@ -29,6 +30,20 @@ export const Footer = () => {
 
 const StyledFooter = styled.footer`
     padding-bottom: 264px;
+
+    position: relative;
+
+    &::after {
+        position: absolute;
+        content: "";
+        background-image: url("${bottomBorder}");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        width: 100%;
+        height: 100%;
+        bottom: 0;
+        z-index: -1;
+    }
 `
 
 const StyledSocial = styled.div`

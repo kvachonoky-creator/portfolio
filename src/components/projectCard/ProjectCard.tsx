@@ -7,11 +7,13 @@ import {LinkButton} from "../linkButton/LinkButton.tsx";
 export const ProjectCard = () => {
     return (
         <StyledArticle>
-                <FlexWrapper gap="24px" direction="column" justify="center" maxwidth={"408px"} width={"100%"} margin={"0 38px 0 50px"}>
+            <StyledDescriptionProject>
+                <FlexWrapper gap="24px" direction="column" justify="center">
                     <ProjectName>Project name</ProjectName>
                     <SectionText title={"I created this personal project in order to show how to create an interface in Figma using a portfolio as an example."} />
                     <LinkButton title={"View Project"}/>
                 </FlexWrapper>
+            </StyledDescriptionProject>
                 <Picture src={picture} alt="picture"/>
         </StyledArticle>
     )
@@ -50,5 +52,11 @@ const ProjectName = styled.h3`
     font-size: 40px;
     line-height: 1.5;
     color: #25282b;
+`
+
+const StyledDescriptionProject = styled.div`
+max-width: 408px;
+    width: 100%;
+    margin: auto 38px auto 50px;
 `
 

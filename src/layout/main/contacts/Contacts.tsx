@@ -10,7 +10,6 @@ export const Contacts = () => {
     const inputType: Array<
         {
             name: string
-            placeholder: string
             type: string
         }> = [
         {name: "Name", type: "text"},

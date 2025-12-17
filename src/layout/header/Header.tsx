@@ -3,7 +3,7 @@ import { FlexWrapper } from "../../components/flexWrapper/FlexWrapper.tsx";
 import { Menu } from "../../components/menu/Menu.tsx";
 import styled from "styled-components";
 import {Icons} from "../../components/icons/Icons.tsx";
-// import {topBorder} from "../../assets/img/yellow-bg.svg"
+import topBorder from "../../assets/img/topBorder.svg?url"
 
 export const Header = () => {
 
@@ -26,19 +26,24 @@ export const Header = () => {
 
 const StyledHeader = styled.header`
     padding: 12px 0;
-    
+    min-height: 56px;
+
     position: relative;
-    
+
     &::after {
         position: absolute;
         content: "";
-        //background-image: url("../../assets/img/yellow-bg.svg");
-        //top: 0;
-        //right: 0;
-        //width: 100%;
-        //height: 100%;
-        
+        background-image: url("${topBorder}");
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        top: 0;
+        right: 0;
+        height: 629px;
+        width: 720px;
+        z-index: -1;
+
     }
+
     //position: fixed;
     //top: 0;
     //left: 0;

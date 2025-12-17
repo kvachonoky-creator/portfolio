@@ -17,7 +17,7 @@ export const AboutMe = () => {
                         <SectionText title={ "I am a frontend developer. I have experience in cross-browser adaptive and responsive web application development. I create with TypeScript, React, Redux. I will be glad to join and work with you!"}
                            />
                         <FlexWrapper gap="12px">
-                            <LinkButton title={"Projects"}/>
+                            <LinkButton href={"#"} title={"Projects"}/>
                             <LinkButton href={"https://www.linkedin.com/in/kyarek/"} title={"LinkedIn"}/>
                         </FlexWrapper>
                     </FlexWrapper>
