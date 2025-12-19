@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="17_12">
-      <change afterPath="$PROJECT_DIR$/src/assets/img/topBorder-mask.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/photoBlock/PhotoBlock.tsx" afterDir="false" />
+    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="19_12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/container/Container.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/container/Container.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/img/myPhoto.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/linkButton/LinkButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/linkButton/LinkButton.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer/Footer.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -98,7 +97,7 @@
       <workItem from="1766003476483" duration="20000" />
       <workItem from="1766003514866" duration="29000" />
       <workItem from="1766085919516" duration="3753000" />
-      <workItem from="1766168537540" duration="7007000" />
+      <workItem from="1766168537540" duration="7877000" />
     </task>
     <task id="LOCAL-00001" summary="13_12">
       <option name="closed" value="true" />
@@ -180,7 +179,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766003339636</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="19_12">
+      <option name="closed" value="true" />
+      <created>1766175651902</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1766175651902</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,7 +199,8 @@
     <MESSAGE value="15_12" />
     <MESSAGE value="16_12" />
     <MESSAGE value="17_12" />
-    <option name="LAST_COMMIT_MESSAGE" value="17_12" />
+    <MESSAGE value="19_12" />
+    <option name="LAST_COMMIT_MESSAGE" value="19_12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

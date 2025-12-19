@@ -10,12 +10,17 @@ export const Footer = () => {
             <Container>
                 <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
                     <StyledSocial>
-                        <a href={"https://t.me/ya_yareekk"} target={"_blank"}><Icons iconId="tg" aria-label={"telegram"} width="48px" height="48px"
-                                  viewBox="0 0 40 40"/></a>
-                        <a href={"https://www.instagram.com/ya_yarek/?igsh=Y21oNWJuY28xbWhh#"} target={"_blank"}><Icons iconId="inst" aria-label={"instagram"} width="48px" height="48px"
-                                  viewBox="0 0 48 48"/></a>
-                        <a href={"https://www.linkedin.com/in/kyarek/"} target={"_blank"}><Icons iconId="linkedin" aria-label={"email"} width="48px" height="48px"
-                                  viewBox="0 0  48 48"/></a>
+                        <a href={"https://t.me/ya_yareekk"} target={"_blank"}><Icons iconId="tg" aria-label={"telegram"}
+                                                                                     width="48px" height="48px"
+                                                                                     viewBox="0 0 40 40"/></a>
+                        <a href={"https://www.instagram.com/ya_yarek/?igsh=Y21oNWJuY28xbWhh#"} target={"_blank"}><Icons
+                            iconId="inst" aria-label={"instagram"} width="48px" height="48px"
+                            viewBox="0 0 48 48"/></a>
+                        <a href={"https://www.linkedin.com/in/kyarek/"} target={"_blank"}><Icons iconId="linkedin"
+                                                                                                 aria-label={"email"}
+                                                                                                 width="48px"
+                                                                                                 height="48px"
+                                                                                                 viewBox="0 0  48 48"/></a>
                     </StyledSocial>
                     <StyledReserved>© 2025 Yaroslau Kvachonak, All Rights Reserved.</StyledReserved>
                 </FlexWrapper>
@@ -38,7 +43,7 @@ const StyledFooter = styled.footer`
         content: "";
         background-image: url("${bottomBorder}");
         background-repeat: no-repeat;
-        background-size: 100% auto;
+        background-size: 100% 100%;
         width: 100%;
         height: 100%;
         bottom: 0;
@@ -53,8 +58,8 @@ const StyledSocial = styled.div`
     a {
         transition: transform 0.2s;
 
-        &:active {
-            transform: scale(0.9);
+        &:hover {
+            transform: scale(1.2);
         }
     }
 `

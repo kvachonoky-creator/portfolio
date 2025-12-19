@@ -11,7 +11,6 @@ export const AboutMe = () => {
     return (
         <StyledAboutMe id="AboutMe">
             <Container>
-                <FlexWrapper gap={"92px"}>
                     <BlockInfo>
                         <FlexWrapper direction="column" gap={"0px"}>
                             <StyledMainTitle>frontend developer</StyledMainTitle>
@@ -30,7 +29,6 @@ export const AboutMe = () => {
                     {/*<PhotoWrapper>*/}
                     {/*    */}
                     {/*</PhotoWrapper>*/}
-                </FlexWrapper>
             </Container>
         </StyledAboutMe>
     );

@@ -33,8 +33,9 @@ const StyledLinkButton = styled.a`
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
     }
-
-    &:active {
-        transform: scale(0.9);
+    
+    
+    &:hover {
+        transform: translateY(-5px);
     }
 `

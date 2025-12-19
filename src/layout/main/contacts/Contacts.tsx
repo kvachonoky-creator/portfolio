@@ -107,7 +107,7 @@ const StyledButton = styled.button`
     align-self: end;
     transition: transform 0.2s;
     
-    &:active {
-        transform: scale(0.9);
+    &:hover {
+        transform: translateY(-5px);
     }
 `
