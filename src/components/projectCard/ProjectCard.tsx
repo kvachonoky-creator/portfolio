@@ -3,6 +3,7 @@ import { FlexWrapper } from "../flexWrapper/FlexWrapper";
 import { SectionText } from "../sectionText/SectionText";
 import picture from "../../assets/img/ToDoListBlog.webp"
 import {LinkButton} from "../linkButton/LinkButton.tsx";
+import {theme} from "../../styles/Theme.ts";
 
 export const ProjectCard = () => {
     return (
@@ -37,6 +38,10 @@ const StyledArticle = styled.article`
          border-radius: 24px;
          width: 150px;
      }
+    
+    @media ${theme.media.tablet} {
+        flex-direction: column-reverse;
+    }
 `
 
 
@@ -44,6 +49,11 @@ const Picture = styled.img`
     width: 496px;
     height: 526px;
     object-fit: cover;
+
+    @media ${theme.media.tablet} {
+        width: 100%;
+    }
+    
 `
 
 const ProjectName = styled.h3`
@@ -52,11 +62,28 @@ const ProjectName = styled.h3`
     font-size: 40px;
     line-height: 1.5;
     color: #25282b;
+
+    @media ${theme.media.tablet} {
+        align-self: center;
+
 `
 
 const StyledDescriptionProject = styled.div`
-max-width: 408px;
+    max-width: 408px;
     width: 100%;
-    margin: auto 38px auto 50px;
+    margin: auto;
+
+
+    @media ${theme.media.tablet} {
+        max-width: 70%;
+        width: 100%;
+        margin: 60px auto;
+    }
+    
+    @media ${theme.media.mobile} {
+        max-width: 282px;
+        margin: 145px auto;
+    }
+
 `
 

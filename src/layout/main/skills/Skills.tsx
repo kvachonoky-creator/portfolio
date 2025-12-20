@@ -29,5 +29,5 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     display: flex;
     flex-direction: column;
-    margin-bottom: 144px;
+    margin-bottom: 186px;
 `

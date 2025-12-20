@@ -34,6 +34,7 @@ export const Footer = () => {
 
 
 const StyledFooter = styled.footer`
+    padding-top: 24px;
     padding-bottom: 264px;
 
     position: relative;

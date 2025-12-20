@@ -3,6 +3,7 @@ import {SectionTitle} from "../../../components/sectionTitle/SectionTitle";
 import {ProjectCard} from "../../../components/projectCard/ProjectCard";
 import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {Container} from "../../../components/container/Container.ts";
+import {theme} from "../../../styles/Theme.ts";
 
 
 export const Projects = () => {
@@ -30,5 +31,10 @@ const StyledProjects = styled.section`
 
     article:nth-child(even) {
         flex-direction: row-reverse;
+
+        @media ${theme.media.tablet} {
+            flex-direction: column-reverse;
+        }
     }
+
 `

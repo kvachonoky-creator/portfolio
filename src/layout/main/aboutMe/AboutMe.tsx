@@ -11,6 +11,7 @@ export const AboutMe = () => {
     return (
         <StyledAboutMe id="AboutMe">
             <Container>
+                <FlexWrapper>
                     <BlockInfo>
                         <FlexWrapper direction="column" gap={"0px"}>
                             <StyledMainTitle>frontend developer</StyledMainTitle>
@@ -24,11 +25,8 @@ export const AboutMe = () => {
                             </FlexWrapper>
                         </FlexWrapper>
                     </BlockInfo>
-
                     <PhotoBlock/>
-                    {/*<PhotoWrapper>*/}
-                    {/*    */}
-                    {/*</PhotoWrapper>*/}
+                </FlexWrapper>
             </Container>
         </StyledAboutMe>
     );
@@ -36,20 +34,40 @@ export const AboutMe = () => {
 
 
 const StyledAboutMe = styled.section`
-    margin-bottom: 144px;
+    margin-bottom: 116px;
+    position: relative;
 
     p {
         font-size: 24px;
         margin-bottom: 32px;
-        max-width: 486px;
         width: 100%;
-    }
 
+        @media screen and (max-width: 1000px){
+            max-width: none;
+        }
+    }
+    
+    
 `
 
 const BlockInfo = styled.div`
-max-width: 520px;
-width: 100%;`
+    margin-top: 55px;
+    max-width: 550px;
+    width: 100%;
+
+    @media screen and (max-width: 1000px) {
+        margin-top: 600px;
+        max-width: none;
+    }
+
+    @media ${theme.media.tablet} {
+        margin-top: 500px;
+    }
+    
+    @media ${theme.media.mobile} {
+        margin-top: 415px;
+    }
+`
 
 const StyledMainTitle = styled.h1`
     margin-top: 55px;
@@ -59,6 +77,7 @@ const StyledMainTitle = styled.h1`
     font-size: 20px;
     text-transform: uppercase;
     color: ${theme.colors.accent};
+    
 `
 
 const StyledSectionTitle = styled.h2`
@@ -68,6 +87,10 @@ const StyledSectionTitle = styled.h2`
     line-height: 1.2;
     color: ${theme.colors.titleFont};
     margin-bottom: 32px;
+
+    @media ${theme.media.tablet} {
+        font-size: 42px;
+    }
 `
 
 

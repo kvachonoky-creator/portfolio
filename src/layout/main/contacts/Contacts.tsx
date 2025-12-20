@@ -44,10 +44,6 @@ const StyledContacts = styled.section`
     flex-direction: column;
     align-items: center;
     margin-bottom: 56px;
-
-    h2 {
-        margin-bottom: 56px;
-    }
 `
 
 const StyledForm = styled.form`
@@ -82,7 +78,8 @@ const StyledLabel = styled.label`
 const StyledTextarea = styled.textarea`
     border: 1px solid #e8ecf4;
     border-radius: 8px;
-    width: 400px;
+    max-width: 400px;
+    width: 100%;
     height: 160px;
     resize: none;
     padding: 4px 8px;
