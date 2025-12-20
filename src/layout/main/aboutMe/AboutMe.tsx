@@ -1,21 +1,21 @@
 import {LinkButton} from "../../../components/linkButton/LinkButton.tsx";
-import styled from "styled-components";
 import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {Container} from "../../../components/container/Container.ts";
-import {theme} from "../../../styles/Theme.ts";
 import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 import {PhotoBlock} from "../../../components/photoBlock/PhotoBlock.tsx";
+import React from "react";
+import {S} from "./AboutMe_Styles.ts"
 
 
-export const AboutMe = () => {
+export const AboutMe: React.FC = () => {
     return (
-        <StyledAboutMe id="AboutMe">
+        <S.StyledAboutMe id="AboutMe">
             <Container>
                 <FlexWrapper>
-                    <BlockInfo>
+                    <S.BlockInfo>
                         <FlexWrapper direction="column" gap={"0px"}>
-                            <StyledMainTitle>frontend developer</StyledMainTitle>
-                            <span><StyledSectionTitle>Hello, my name is Yaroslau Kvachonak</StyledSectionTitle></span>
+                            <S.StyledMainTitle>frontend developer</S.StyledMainTitle>
+                            <span><S.StyledSectionTitle>Hello, my name is Yaroslau Kvachonak</S.StyledSectionTitle></span>
                             <SectionText
                                 title={"I am a frontend developer. I have experience in cross-browser adaptive and responsive web application development. I create with TypeScript, React, Redux. I will be glad to join and work with you!"}
                             />
@@ -24,74 +24,14 @@ export const AboutMe = () => {
                                 <LinkButton href={"https://www.linkedin.com/in/kyarek/"} title={"LinkedIn"}/>
                             </FlexWrapper>
                         </FlexWrapper>
-                    </BlockInfo>
+                    </S.BlockInfo>
                     <PhotoBlock/>
                 </FlexWrapper>
             </Container>
-        </StyledAboutMe>
+        </S.StyledAboutMe>
     );
 };
 
-
-const StyledAboutMe = styled.section`
-    margin-bottom: 116px;
-    position: relative;
-
-    p {
-        font-size: 24px;
-        margin-bottom: 32px;
-        width: 100%;
-
-        @media screen and (max-width: 1000px){
-            max-width: none;
-        }
-    }
-    
-    
-`
-
-const BlockInfo = styled.div`
-    margin-top: 55px;
-    max-width: 550px;
-    width: 100%;
-
-    @media screen and (max-width: 1000px) {
-        margin-top: 600px;
-        max-width: none;
-    }
-
-    @media ${theme.media.tablet} {
-        margin-top: 500px;
-    }
-    
-    @media ${theme.media.mobile} {
-        margin-top: 415px;
-    }
-`
-
-const StyledMainTitle = styled.h1`
-    margin-top: 55px;
-    margin-bottom: 12px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    text-transform: uppercase;
-    color: ${theme.colors.accent};
-    
-`
-
-const StyledSectionTitle = styled.h2`
-    font-family: "Roboto", sans-serif;
-    font-weight: 700;
-    font-size: 64px;
-    line-height: 1.2;
-    color: ${theme.colors.titleFont};
-    margin-bottom: 32px;
-
-    @media ${theme.media.tablet} {
-        font-size: 42px;
-    }
-`
 
 
 

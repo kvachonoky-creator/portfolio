@@ -24,8 +24,6 @@ export const Skills = () => {
         </StyledSkills>
     );
 };
-
-
 const StyledSkills = styled.section`
     display: flex;
     flex-direction: column;

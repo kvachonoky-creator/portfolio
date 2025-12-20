@@ -1,44 +1,34 @@
-import { Container } from "../../components/container/Container.ts";
-import { FlexWrapper } from "../../components/flexWrapper/FlexWrapper.tsx";
-import { HeaderMenu } from "../../components/menu/headerMenu.tsx";
-import styled from "styled-components";
+import {Container} from "../../components/container/Container.ts";
+import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
+import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
 import {Icons} from "../../components/icons/Icons.tsx";
-import {MobileMenu} from "../../components/menu/mobileMEnu.tsx";
+import {MobileMenu} from "./headerMenu/mobileMenu/mobileMEnu.tsx";
+import * as React from "react";
+import {S} from "./Header_Styles.ts"
 
-export const Header = () => {
+export const Header: React.FC = () => {
 
     const menuTitle = ["AboutMe", "Project", "Contacts"]
 
+    const [width, setWidth] = React.useState(window.innerWidth);
+    const breakpoint = 768;
+
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, [])
+
     return (
-        <StyledHeader>
+        <S.Header>
             <Container>
                 <FlexWrapper justify="space-between" align="center">
-                    <LogoLink href="#">
-                        <Icons  iconId={"logo"} width={"300px"} height={"15px"} viewBox={"0 0 300 15"}/>
-                    </LogoLink>
-                    <HeaderMenu menuItem={menuTitle}/>
-                    <MobileMenu menuItem={menuTitle}/>
+                    <S.LogoLink href="#">
+                        <Icons iconId={"logo"} width={"300px"} height={"15px"} viewBox={"0 0 300 15"}/>
+                    </S.LogoLink>
+                    {width < breakpoint? <MobileMenu menuItem={menuTitle}/> : <DesktopMenu menuItem={menuTitle}/>}
                 </FlexWrapper>
             </Container>
-        </StyledHeader>
+        </S.Header>
     );
 };
-
-
-const StyledHeader = styled.header`
-    padding: 12px 0;
-    min-height: 56px;
-
-    
-
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-`
-
-const LogoLink = styled.a`
-    display: flex;
-    align-items: center;
-`

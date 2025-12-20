@@ -1,15 +1,16 @@
 import {Icons} from "../../components/icons/Icons.tsx";
-import styled from "styled-components";
 import {Container} from "../../components/container/Container.ts";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
-import bottomBorder from "../../assets/img/bottomBorder.svg?url"
+import {S} from "./Footer_Styles.ts"
+import React from "react";
 
-export const Footer = () => {
+
+export const Footer: React.FC = () => {
     return (
-        <StyledFooter>
+        <S.Footer>
             <Container>
                 <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
-                    <StyledSocial>
+                    <S.Social>
                         <a href={"https://t.me/ya_yareekk"} target={"_blank"}><Icons iconId="tg" aria-label={"telegram"}
                                                                                      width="48px" height="48px"
                                                                                      viewBox="0 0 40 40"/></a>
@@ -21,55 +22,14 @@ export const Footer = () => {
                                                                                                  width="48px"
                                                                                                  height="48px"
                                                                                                  viewBox="0 0  48 48"/></a>
-                    </StyledSocial>
-                    <StyledReserved>© 2025 Yaroslau Kvachonak, All Rights Reserved.</StyledReserved>
+                    </S.Social>
+                    <S.Reserved>© 2025 Yaroslau Kvachonak, All Rights Reserved.</S.Reserved>
                 </FlexWrapper>
-
             </Container>
-
-        </StyledFooter>
-
+        </S.Footer>
     );
 };
 
 
-const StyledFooter = styled.footer`
-    padding-top: 24px;
-    padding-bottom: 264px;
-
-    position: relative;
-
-    &::after {
-        position: absolute;
-        content: "";
-        background-image: url("${bottomBorder}");
-        background-repeat: no-repeat;
-        background-size: 100% 100%;
-        width: 100%;
-        height: 100%;
-        bottom: 0;
-        z-index: -1;
-    }
-`
-
-const StyledSocial = styled.div`
-    display: flex;
-    gap: 24px;
-
-    a {
-        transition: transform 0.2s;
-
-        &:hover {
-            transform: scale(1.2);
-        }
-    }
-`
-
-const StyledReserved = styled.small`
-    font-family: "Nunito", sans-serif;
-    font-weight: 400;
-    font-size: 16px;
-    color: #828282;
-`
 
 
