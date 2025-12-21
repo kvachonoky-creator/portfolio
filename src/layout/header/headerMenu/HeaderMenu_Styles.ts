@@ -1,7 +1,11 @@
 import styled, {css} from "styled-components";
 
 const ListItem = styled.li`
+    transition: transform 0.2s;
 
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 const Link = styled.a`

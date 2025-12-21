@@ -6,6 +6,7 @@ const Contacts = styled.section`
     flex-direction: column;
     align-items: center;
     margin-bottom: 56px;
+    position: relative;
 `
 
 const Form = styled.form`

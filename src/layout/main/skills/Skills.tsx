@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {Icons} from "../../../components/icons/Icons.tsx";
 import {Container} from "../../../components/container/Container.ts";
+import {Zoom} from "react-awesome-reveal";
 
 export const Skills = () => {
 
@@ -13,11 +14,14 @@ export const Skills = () => {
             <Container>
                 <SectionTitle title={"Skills"}/>
                 <FlexWrapper wrap={"wrap"} gap={"74px 96px"} justify={"center"}>
-                    {skillsIcon.map((icon, i) => {
-                        return (
-                            <Icons key={i} aria-label={icon} iconId={icon}/>
-                        )
-                    })}
+                    <Zoom cascade={true} damping={0.3}>
+                        {skillsIcon.map((icon, i) => {
+                            return (
+                                <Icons key={i} aria-label={icon} iconId={icon}/>
+                            )
+                        })}
+                    </Zoom>
+
                 </FlexWrapper>
             </Container>
 
@@ -28,4 +32,5 @@ const StyledSkills = styled.section`
     display: flex;
     flex-direction: column;
     margin-bottom: 186px;
+    position: relative;
 `

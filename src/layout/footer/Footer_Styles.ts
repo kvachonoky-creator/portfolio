@@ -2,6 +2,7 @@ import styled from "styled-components";
 import bottomBorder from "../../assets/img/bottomBorder.svg?url"
 
 const Footer = styled.footer`
+   
     padding-top: 24px;
     padding-bottom: 264px;
 

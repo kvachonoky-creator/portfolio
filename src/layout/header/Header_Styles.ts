@@ -15,6 +15,11 @@ const Header = styled.header`
 const LogoLink = styled.a`
     display: flex;
     align-items: center;
+    transition: transform 0.2s;
+    
+    &:hover {
+        transform: scale(1.1);
+    }
 `
 
 export const S = {

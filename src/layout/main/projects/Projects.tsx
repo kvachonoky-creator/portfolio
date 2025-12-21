@@ -53,6 +53,7 @@ const StyledProjects = styled.section`
     flex-direction: column;
     align-items: center;
     margin-bottom: 144px;
+    position: relative;
 
     article:nth-child(even) {
         flex-direction: row-reverse;
