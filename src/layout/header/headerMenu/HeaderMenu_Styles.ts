@@ -1,5 +1,4 @@
 import styled, {css} from "styled-components";
-import {theme} from "../../../styles/Theme.ts";
 
 const ListItem = styled.li`
 
@@ -22,7 +21,7 @@ const MobileMenu = styled.nav`
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
-    background-color: ${theme.colors.primaryBG};
+    background-color: rgba(245, 245, 245, 0.62);
     top: 0;
     left: 0;
     right: 0;
@@ -61,7 +60,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         height: 2px;
         background-color: #25282b;
         ${props => props.isOpen && css<{ isOpen: boolean }>`
-            background-color: rgba(135, 28, 28, 0.9);
+            background-color: rgba(135, 28, 28, 0);
         `}
 
     }

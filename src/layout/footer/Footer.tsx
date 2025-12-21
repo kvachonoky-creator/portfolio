@@ -11,14 +11,13 @@ export const Footer: React.FC = () => {
             <Container>
                 <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
                     <S.Social>
-                        <a href={"https://t.me/ya_yareekk"} target={"_blank"}><Icons iconId="tg" aria-label={"telegram"}
+                        <a href={"https://t.me/ya_yareekk"} aria-label={"telegram"} target={"_blank"}><Icons iconId="tg"
                                                                                      width="48px" height="48px"
                                                                                      viewBox="0 0 40 40"/></a>
-                        <a href={"https://www.instagram.com/ya_yarek/?igsh=Y21oNWJuY28xbWhh#"} target={"_blank"}><Icons
-                            iconId="inst" aria-label={"instagram"} width="48px" height="48px"
+                        <a href={"https://www.instagram.com/ya_yarek/?igsh=Y21oNWJuY28xbWhh#"} aria-label={"instagram"} target={"_blank"}><Icons
+                            iconId="inst" width="48px" height="48px"
                             viewBox="0 0 48 48"/></a>
-                        <a href={"https://www.linkedin.com/in/kyarek/"} target={"_blank"}><Icons iconId="linkedin"
-                                                                                                 aria-label={"email"}
+                        <a href={"https://www.linkedin.com/in/kyarek/"} aria-label={"linkedin"} target={"_blank"}><Icons iconId="linkedin"
                                                                                                  width="48px"
                                                                                                  height="48px"
                                                                                                  viewBox="0 0  48 48"/></a>

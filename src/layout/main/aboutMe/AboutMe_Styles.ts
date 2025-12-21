@@ -45,6 +45,10 @@ const StyledMainTitle = styled.h1`
     text-transform: uppercase;
     color: ${theme.colors.accent};
     
+    p {
+        display: none;
+    }
+    
 `
 
 const StyledSectionTitle = styled.h2`
