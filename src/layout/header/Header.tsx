@@ -8,7 +8,7 @@ import {S} from "./Header_Styles.ts"
 
 export const Header: React.FC = () => {
 
-    const menuTitle = ["AboutMe", "Project", "Contacts"]
+    const menuTitle = ["About", "Project", "Contacts"]
 
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 768;

@@ -9,7 +9,7 @@ import {S} from "./AboutMe_Styles.ts"
 
 export const AboutMe: React.FC = () => {
     return (
-        <S.StyledAboutMe id="AboutMe">
+        <S.StyledAboutMe id="About">
             <Container>
                 <FlexWrapper>
                     <S.BlockInfo>
