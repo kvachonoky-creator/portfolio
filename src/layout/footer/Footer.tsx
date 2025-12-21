@@ -3,12 +3,14 @@ import {Container} from "../../components/container/Container.ts";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
 import {S} from "./Footer_Styles.ts"
 import React from "react";
+import {Fade} from "react-awesome-reveal";
 
 
 export const Footer: React.FC = () => {
     return (
         <S.Footer>
             <Container>
+                <Fade cascade={true} delay={400}>
                 <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
                     <S.Social>
                         <a href={"https://t.me/ya_yareekk"} aria-label={"telegram"} target={"_blank"}><Icons iconId="tg"
@@ -24,6 +26,7 @@ export const Footer: React.FC = () => {
                     </S.Social>
                     <S.Reserved>© 2025 Yaroslau Kvachonak, All Rights Reserved.</S.Reserved>
                 </FlexWrapper>
+                </Fade>
             </Container>
         </S.Footer>
     );

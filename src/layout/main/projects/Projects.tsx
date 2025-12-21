@@ -6,6 +6,7 @@ import {Container} from "../../../components/container/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
 import React from "react";
 import picture from "../../../assets/img/ToDoListBlog.webp"
+import {Slide} from "react-awesome-reveal";
 
 export const Projects: React.FC = () => {
 
@@ -32,13 +33,16 @@ export const Projects: React.FC = () => {
             <Container>
                 <SectionTitle title={"Projects"}/>
                 <FlexWrapper gap="80px" direction="column">
-                    {projectsData.map((p, i) => {
-                        return <ProjectCard
-                            key={i}
-                            src={picture}
-                            projectTitle={p.projectTitle}
-                            projectText={p.projectText}/>
-                    })}
+                    <Slide direction="column"
+                    >
+                        {projectsData.map((p, i) => {
+                            return <ProjectCard
+                                key={i}
+                                src={picture}
+                                projectTitle={p.projectTitle}
+                                projectText={p.projectText}/>
+                        })}
+                    </Slide>
                 </FlexWrapper>
             </Container>
         </StyledProjects>
