@@ -19,7 +19,7 @@ export const Contacts = () => {
     return (
         <S.Contacts id="Contacts">
             <Container>
-                <Fade cascade={true} delay={400}>
+                <Fade cascade={true} delay={350}>
                     <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
                         <SectionTitle title={"Contact me"}/>
                         <S.Form>

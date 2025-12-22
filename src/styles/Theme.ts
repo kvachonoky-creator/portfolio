@@ -2,7 +2,7 @@ export const theme = {
     colors: {
         primaryBG: "#F5F5F5",
         secondaryBG: "#fff",
-        accent: "#57c304",
+        accent: "#0668f6",
         
         titleFont: "#333",
         textFont: "#828282"

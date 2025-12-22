@@ -10,7 +10,7 @@ export const Footer: React.FC = () => {
     return (
         <S.Footer>
             <Container>
-                <Fade cascade={true} delay={400}>
+                <Fade cascade={true} delay={350}>
                 <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
                     <S.Social>
                         <a href={"https://t.me/ya_yareekk"} aria-label={"telegram"} target={"_blank"}><Icons iconId="tg"

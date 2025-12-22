@@ -33,8 +33,7 @@ export const Projects: React.FC = () => {
             <Container>
                 <SectionTitle title={"Projects"}/>
                 <FlexWrapper gap="80px" direction="column">
-                    <Slide direction="column"
-                    >
+                    <Slide direction={"left"}>
                         {projectsData.map((p, i) => {
                             return <ProjectCard
                                 key={i}
