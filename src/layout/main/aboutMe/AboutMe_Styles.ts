@@ -4,6 +4,7 @@ import {theme} from "../../../styles/Theme.ts";
 const StyledAboutMe = styled.section`
     margin-bottom: 116px;
     position: relative;
+    overflow-x: clip;
 
     p {
         font-size: 24px;
@@ -21,6 +22,8 @@ const BlockInfo = styled.div`
     margin-top: 55px;
     max-width: 550px;
     width: 100%;
+    position: relative;
+    z-index: 2;
 
     @media screen and (max-width: 1050px) {
         margin-top: 600px;

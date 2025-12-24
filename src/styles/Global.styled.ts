@@ -58,7 +58,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     @font-face {
-        font-family: PlayfairDisplay;
+        font-family: "Playfair Display";
         src: url('../assets/fonts/PlayfairDisplay-Bold.eot?') format("eot"),
         url('../assets/fonts/PlayfairDisplay-Bold.woff2') format("woff2"),
         url('../assets/fonts/PlayfairDisplay-Bold.ttf') format("truetype");

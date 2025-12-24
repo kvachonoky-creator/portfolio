@@ -35,12 +35,13 @@ export const AboutMe: React.FC = () => {
                             </FlexWrapper>
                         </FlexWrapper>
                     </S.BlockInfo>
-                    <PhotoBlock/>
+                        <PhotoBlock/>
                 </FlexWrapper>
             </Container>
         </S.StyledAboutMe>
     );
 };
+
 
 
 

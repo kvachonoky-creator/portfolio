@@ -3,6 +3,7 @@ import styled from "styled-components";
 const Header = styled.header`
     padding: 12px 0;
     min-height: 56px;
+    backdrop-filter: blur(1px);
 
 
     position: fixed;

@@ -6,7 +6,6 @@ export const PhotoBlock: React.FC = () => {
     return (
             <S.PhotoBlock>
                 <S.PhotoBackground/>
-
                 <S.Photo src={photo} alt="My photo"/>
             </S.PhotoBlock>
     );

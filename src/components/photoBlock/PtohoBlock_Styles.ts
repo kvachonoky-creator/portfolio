@@ -5,13 +5,15 @@ import topBorderBlack from "../../assets/img/topBorder-mask.svg?url"
 
 
 const PhotoBlock = styled.div`
+    top: -120px;
     position: absolute;
-    right: max(0px, calc((100vw - 1440px)/2));
-    max-width: 720px;
+    right: max(-210px, calc(50% - 930px));
+    max-width: 900px;
     width: 100%;
-    height: 629px;
-    z-index: -1;
-    
+    min-height: 900px;
+    height: 100%;
+    z-index: 1;
+
     @media ${theme.media.tablet} {
         top: -100px;
     }
@@ -25,8 +27,6 @@ const PhotoBackground = styled.div`
     height: 100%;
     background-image:  url("${topBorder}");
     background-repeat: no-repeat;
-    background-size: 105% 105%;
-    background-position: 2.5% 2.5%;
     z-index: -2;
     
 `
@@ -39,7 +39,7 @@ const Photo = styled.img`
     width: 100%;
     height: 100%;
     mask-image: url("${topBorderBlack}");
-    mask-size: 105% 105%;
+    mask-repeat: no-repeat;
     object-fit: cover;
     z-index: -1;
 
