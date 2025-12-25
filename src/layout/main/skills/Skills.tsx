@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {Icons} from "../../../components/icons/Icons.tsx";
 import {Container} from "../../../components/container/Container.ts";
 import {Zoom} from "react-awesome-reveal";
+import {theme} from "../../../styles/Theme.ts";
 
 export const Skills = () => {
 
@@ -31,6 +32,7 @@ export const Skills = () => {
 const StyledSkills = styled.section`
     display: flex;
     flex-direction: column;
-    margin-bottom: 186px;
+    padding: 95px 0;
     position: relative;
+    background: ${theme.colors.primaryBG};
 `

@@ -5,8 +5,9 @@ const Contacts = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 56px;
+    padding: 55px 0;
     position: relative;
+    background-color: ${theme.colors.primaryBG};
 `
 
 const Form = styled.form`

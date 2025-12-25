@@ -6,7 +6,6 @@ import {Container} from "../../../components/container/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
 import React from "react";
 import picture from "../../../assets/img/ToDoListBlog.webp"
-import {Slide} from "react-awesome-reveal";
 
 export const Projects: React.FC = () => {
 
@@ -33,15 +32,15 @@ export const Projects: React.FC = () => {
             <Container>
                 <SectionTitle title={"Projects"}/>
                 <FlexWrapper gap="80px" direction="column">
-                    <Slide direction={"left"}>
-                        {projectsData.map((p, i) => {
-                            return <ProjectCard
-                                key={i}
-                                src={picture}
-                                projectTitle={p.projectTitle}
-                                projectText={p.projectText}/>
-                        })}
-                    </Slide>
+                    {projectsData.map((p, i) => {
+                        return(
+                                <ProjectCard
+                                    key={i}
+                                    src={picture}
+                                    projectTitle={p.projectTitle}
+                                    projectText={p.projectText}/>
+                        )
+                    })}
                 </FlexWrapper>
             </Container>
         </StyledProjects>
@@ -55,8 +54,9 @@ const StyledProjects = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 144px;
+    padding: 75px 0;
     position: relative;
+    background-color: ${theme.colors.primaryBG};
 
     article:nth-child(even) {
         flex-direction: row-reverse;
@@ -65,5 +65,7 @@ const StyledProjects = styled.section`
             flex-direction: column-reverse;
         }
     }
+    
+    
 
 `

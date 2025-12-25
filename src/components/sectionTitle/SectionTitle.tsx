@@ -15,7 +15,7 @@ export const SectionTitle = (props: SectionTitleProps) => {
 
 const SectiontitleStyled = styled.h2`
     margin-bottom: 88px;
-    font-family: "Playfair Display", sans-serif;
+    font-family: "Playfair Display",serif;
     font-weight: 700;
     font-size: 48px;
     line-height: 1.5;

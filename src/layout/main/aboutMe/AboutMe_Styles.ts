@@ -19,23 +19,23 @@ const StyledAboutMe = styled.section`
 `
 
 const BlockInfo = styled.div`
-    margin-top: 55px;
+    padding: 55px 0 72px;
     max-width: 550px;
     width: 100%;
     position: relative;
     z-index: 2;
 
-    @media screen and (max-width: 1050px) {
-        margin-top: 600px;
+    @media screen and (max-width: 1150px) {
+        margin-top: 600px; // поменять
         max-width: none;
     }
 
     @media ${theme.media.tablet} {
-        margin-top: 500px;
+        margin-top: 650px;// поменять
     }
     
     @media ${theme.media.mobile} {
-        margin-top: 415px;
+        margin-top: 650px; // поменять
     }
 `
 

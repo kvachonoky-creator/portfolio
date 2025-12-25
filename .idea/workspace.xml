@@ -4,15 +4,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="22_12">
+    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="24_12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/bottomBorder.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/bottomBorder.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/topBorder-mask.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/topBorder-mask.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photoBlock/PhotoBlock.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photoBlock/PhotoBlock.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Comfortaa-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Comfortaa-Bold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Comfortaa-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Comfortaa-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Comfortaa-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Comfortaa-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-Bold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Regular.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-Regular.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Regular.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-Regular.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-Regular.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-Regular.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-SemiBold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-SemiBold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-SemiBold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-SemiBold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Nunito-SemiBold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Nunito-SemiBold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/PlayfairDisplay-Bold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/PlayfairDisplay-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/PlayfairDisplay-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/PlayfairDisplay-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Raleway-Medium.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Raleway-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Raleway-Medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Raleway-Medium.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Bold.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Roboto-Bold.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Bold.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Roboto-Bold.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Bold.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Roboto-Bold.woff2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Medium.eot" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Roboto-Medium.eot" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Roboto-Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/fonts/Roboto-Medium.woff2" beforeDir="false" afterPath="$PROJECT_DIR$/public/fonts/Roboto-Medium.woff2" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/photoBlock/PtohoBlock_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photoBlock/PtohoBlock_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projectCard/ProjectCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projectCard/ProjectCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/projectCard/ProjectCard_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/projectCard/ProjectCard_Styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sectionText/SectionText.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sectionText/SectionText.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sectionTitle/SectionTitle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sectionTitle/SectionTitle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/footer/Footer_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer/Footer_Styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/header/headerMenu/HeaderMenu_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/headerMenu/HeaderMenu_Styles.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe_Styles.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts_Style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts_Style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/projects/Projects.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/projects/Projects.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/skills/Skills.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/skills/Skills.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/styles/Global.styled.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/Global.styled.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -71,6 +99,7 @@
       <recent name="D:\incubator_main\portfolio\src\assets\img" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\incubator_main\portfolio\public" />
       <recent name="D:\incubator_main\portfolio\src\layout\header\headerMenu" />
       <recent name="D:\incubator_main\portfolio\src\layout\header\mobileMenu" />
       <recent name="D:\incubator_main\portfolio\src\layout\header" />
@@ -112,7 +141,8 @@
       <workItem from="1766334351815" duration="8918000" />
       <workItem from="1766415274552" duration="2754000" />
       <workItem from="1766509976438" duration="656000" />
-      <workItem from="1766574084204" duration="14737000" />
+      <workItem from="1766574084204" duration="14754000" />
+      <workItem from="1766671079552" duration="8062000" />
     </task>
     <task id="LOCAL-00001" summary="13_12">
       <option name="closed" value="true" />
@@ -274,7 +304,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766426097389</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="24_12">
+      <option name="closed" value="true" />
+      <created>1766607262226</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1766607262226</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -289,7 +327,8 @@
     <MESSAGE value="19_12" />
     <MESSAGE value="20_12" />
     <MESSAGE value="22_12" />
-    <option name="LAST_COMMIT_MESSAGE" value="22_12" />
+    <MESSAGE value="24_12" />
+    <option name="LAST_COMMIT_MESSAGE" value="24_12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

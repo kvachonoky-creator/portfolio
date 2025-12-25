@@ -15,7 +15,13 @@ const PhotoBlock = styled.div`
     z-index: 1;
 
     @media ${theme.media.tablet} {
+        right: -50px;
         top: -100px;
+    }
+
+    @media ${theme.media.mobile} {
+        right: 0;
+        max-width: 600px; // сделать правильно
     }
 `
 
@@ -25,10 +31,10 @@ const PhotoBackground = styled.div`
     left: 0;
     width: 100%;
     height: 100%;
-    background-image:  url("${topBorder}");
+    background-image: url("${topBorder}");
     background-repeat: no-repeat;
     z-index: -2;
-    
+
 `
 
 
