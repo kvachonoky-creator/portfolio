@@ -32,10 +32,8 @@ const StyledLinkButton = styled.a`
     &:hover {
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
-    }
-    
-    
-    &:hover {
+        color: white;
         transform: translateY(-5px);
     }
+    
 `

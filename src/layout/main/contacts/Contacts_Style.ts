@@ -63,11 +63,11 @@ const Button = styled.button`
     font-weight: 500;
     font-size: 18px;
     line-height: 1.5;
-    color: #25282b;
+    color: #ffffff;
     cursor: pointer;
     align-self: end;
     transition: transform 0.2s;
-    
+
     &:hover {
         transform: translateY(-5px);
     }

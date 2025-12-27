@@ -10,8 +10,10 @@ export const Header: React.FC = () => {
 
     const menuTitle = ["About", "Project", "Contacts"]
 
+
     const [width, setWidth] = React.useState(window.innerWidth);
     const breakpoint = 768;
+
 
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth);
@@ -26,9 +28,10 @@ export const Header: React.FC = () => {
                     <S.LogoLink href="#">
                         <Icons iconId={"logo"} width={"300px"} height={"15px"} viewBox={"0 0 300 15"}/>
                     </S.LogoLink>
-                    {width < breakpoint? <MobileMenu menuItem={menuTitle}/> : <DesktopMenu menuItem={menuTitle}/>}
+                    {width < breakpoint ? <MobileMenu menuItem={menuTitle}/> :
+                        <DesktopMenu menuItem={menuTitle}/>}
                 </FlexWrapper>
             </Container>
         </S.Header>
     );
-};
+}

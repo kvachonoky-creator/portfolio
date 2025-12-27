@@ -17,12 +17,13 @@ const PhotoBlock = styled.div`
     @media ${theme.media.tablet} {
         right: -50px;
         top: -100px;
+        width: 100%;
     }
-
+    
     @media ${theme.media.mobile} {
-        right: 0;
-        max-width: 600px; // сделать правильно
+        width: 110%;
     }
+    
 `
 
 const PhotoBackground = styled.div`
@@ -34,6 +35,7 @@ const PhotoBackground = styled.div`
     background-image: url("${topBorder}");
     background-repeat: no-repeat;
     z-index: -2;
+    
 
 `
 
@@ -48,7 +50,11 @@ const Photo = styled.img`
     mask-repeat: no-repeat;
     object-fit: cover;
     z-index: -1;
-
+    
+    
+    @media ${theme.media.mobile} {
+        height: 80%;
+    }
 `
 
 export const S = {
