@@ -6,14 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="25_12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/linkButton/LinkButton.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/linkButton/LinkButton.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/photoBlock/PtohoBlock_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/photoBlock/PtohoBlock_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/footer/Footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer/Footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/footer/Footer_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer/Footer_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/headerMenu/mobileMenu/mobileMEnu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/headerMenu/mobileMenu/mobileMEnu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts_Style.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts_Style.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.modules.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.modules.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -116,7 +113,8 @@
       <workItem from="1766574084204" duration="14754000" />
       <workItem from="1766671079552" duration="8754000" />
       <workItem from="1766689268409" duration="95000" />
-      <workItem from="1766851880820" duration="5948000" />
+      <workItem from="1766851880820" duration="5972000" />
+      <workItem from="1766945780060" duration="2041000" />
     </task>
     <task id="LOCAL-00001" summary="13_12">
       <option name="closed" value="true" />
@@ -294,7 +292,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766680372971</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="25_12">
+      <option name="closed" value="true" />
+      <created>1766857980905</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1766857980905</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -328,12 +334,10 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/layout/header/Header.tsx</url>
           <line>24</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/layout/header/headerMenu/mobileMenu/mobileMEnu.tsx</url>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="8" />
         </line-breakpoint>
       </breakpoints>
