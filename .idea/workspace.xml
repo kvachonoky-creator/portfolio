@@ -4,12 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="25_12">
+    <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="28_12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.modules.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.modules.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm/lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm/lock.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -114,7 +112,8 @@
       <workItem from="1766671079552" duration="8754000" />
       <workItem from="1766689268409" duration="95000" />
       <workItem from="1766851880820" duration="5972000" />
-      <workItem from="1766945780060" duration="2041000" />
+      <workItem from="1766945780060" duration="2205000" />
+      <workItem from="1767036849700" duration="469000" />
     </task>
     <task id="LOCAL-00001" summary="13_12">
       <option name="closed" value="true" />
@@ -300,7 +299,15 @@
       <option name="project" value="LOCAL" />
       <updated>1766857980905</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="28_12">
+      <option name="closed" value="true" />
+      <created>1766949514059</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1766949514059</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -317,7 +324,8 @@
     <MESSAGE value="22_12" />
     <MESSAGE value="24_12" />
     <MESSAGE value="25_12" />
-    <option name="LAST_COMMIT_MESSAGE" value="25_12" />
+    <MESSAGE value="28_12" />
+    <option name="LAST_COMMIT_MESSAGE" value="28_12" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

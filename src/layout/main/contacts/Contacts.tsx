@@ -4,13 +4,13 @@ import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {S} from "./Contacts_Style.ts"
 import {Fade} from "react-awesome-reveal";
 import emailjs from '@emailjs/browser';
-import {ElementRef, useRef} from "react";
+import React, {ElementRef, useRef} from "react";
 
 
 export const Contacts = () => {
     const form = useRef<ElementRef<'form'>>(null);
 
-    const sendEmail = (e:any) => {
+    const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         
         if(!form.current) return
