@@ -29,10 +29,6 @@ const Social = styled.div`
 
     a {
         transition: transform 0.2s;
-
-        svg {
-            fill: red;
-        }
         
         &:hover {
             transform: scale(1.2);

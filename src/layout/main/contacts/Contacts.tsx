@@ -10,10 +10,10 @@ import React, {ElementRef, useRef} from "react";
 export const Contacts = () => {
     const form = useRef<ElementRef<'form'>>(null);
 
-    const sendEmail = (e:React.FormEvent<HTMLFormElement>) => {
+    const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        
-        if(!form.current) return
+
+        if (!form.current) return
 
         emailjs
             .sendForm('service_faknwqa', 'template_j59tynz', form.current, {
@@ -22,12 +22,12 @@ export const Contacts = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    form.current?.reset();
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
                 },
             );
-        e.target.reset();
     };
 
     const inputType: Array<
