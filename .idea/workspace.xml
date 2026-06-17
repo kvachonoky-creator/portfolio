@@ -6,21 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="62671cc5-2033-4204-a3dd-aefa6e5d2d1d" name="Changes" comment="28_12">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.modules.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.modules.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm-workspace-state-v1.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.pnpm/lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.pnpm/lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.vite/deps/_metadata.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pnpm-lock.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pnpm-lock.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/assets/img/sprite.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/img/sprite.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/particles/Particles.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/particles/Particles.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/footer/Footer_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/footer/Footer_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/Header_Styles.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/Header_Styles.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/header/headerMenu/mobileMenu/mobileMEnu.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/header/headerMenu/mobileMenu/mobileMenu.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/layout/main/contacts/Contacts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,6 +55,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "pnpm",
     "npm.deploy.executor": "Run",
+    "settings.editor.selected.configurable": "org.jetbrains.plugins.github.ui.GithubSettingsConfigurable",
     "to.speed.mode.migration.done": "true",
     "ts.external.directory.path": "D:\\incubator_main\\portfolio\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -373,26 +360,6 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/layout/main/aboutMe/AboutMe.tsx</url>
           <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/particles/Particles.tsx</url>
-          <line>46</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/layout/header/Header.tsx</url>
-          <line>34</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/layout/header/headerMenu/mobileMenu/mobileMenu.tsx</url>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/components/particles/Particles.tsx</url>
-          <line>11</line>
-          <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="9" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
