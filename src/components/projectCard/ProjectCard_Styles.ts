@@ -20,16 +20,32 @@ const Article = styled.article`
 
     @media ${theme.media.tablet} {
         flex-direction: column-reverse;
+        min-height: auto;
+    }
+`
+
+const CardFrame = styled.div`
+    max-width: 992px;
+    width: 100%;
+    margin: 0 auto;
+
+    &:nth-child(even) ${Article} {
+        flex-direction: row-reverse;
+
+        @media ${theme.media.tablet} {
+            flex-direction: column-reverse;
+        }
     }
 `
 
 const Picture = styled.img`
-    width: 100%;
+    width: 50%;
     min-height: 100%;
     object-fit: cover;
 
     @media ${theme.media.tablet} {
         width: 100%;
+        min-height: 260px;
     }
 
 `
@@ -44,16 +60,21 @@ const ProjectName = styled.h3`
 `
 
 const Wrapper = styled.div`
-display: flex;
+    display: flex;
     flex-direction: column;
     padding: 130px 38px 130px 50px;
     gap: 24px;
     justify-content: center;
     flex-grow: 1;
+
+    @media ${theme.media.tablet} {
+        padding: 40px 24px;
+    }
 `
 
 
 export const S = {
+    CardFrame,
     Article,
     Picture,
     ProjectName,
