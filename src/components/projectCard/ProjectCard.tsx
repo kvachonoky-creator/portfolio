@@ -16,6 +16,7 @@ export const ProjectCard = (props: ProjectCardProps) => {
             <Fade direction="up" triggerOnce duration={500} fraction={0.1} style={{width: "100%"}}>
                 <S.Article>
                     <S.Wrapper>
+                        <S.ProjectLabel>{props.href ? "Public repository" : "Concept study"}</S.ProjectLabel>
                         <S.ProjectName>{props.projectTitle}</S.ProjectName>
                         <SectionText title={props.projectText}/>
                         <LinkButton title="View Project" href={props.href} disabled={!props.href}/>

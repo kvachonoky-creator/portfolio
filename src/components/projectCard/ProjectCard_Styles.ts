@@ -4,16 +4,15 @@ import {theme} from "../../styles/Theme.ts";
 const Article = styled.article`
     display: flex;
     width: 100%;
-    min-height: 524px;
+    min-height: 560px;
     overflow: hidden;
-    border-radius: 24px;
-    background: #fff;
-    box-shadow: 0 6px 64px rgba(112, 144, 176, 0.1);
+    border: 1px solid ${theme.colors.dark};
+    border-radius: 8px;
+    background: ${theme.colors.secondaryBG};
+    box-shadow: 12px 12px 0 rgba(12, 21, 48, 0.07);
 
     a {
-        width: 151px;
-        border-width: 1px;
-        border-radius: 24px;
+        align-self: flex-start;
     }
 
     @media ${theme.media.projectStack} {
@@ -24,7 +23,7 @@ const Article = styled.article`
 
 const CardFrame = styled.div`
     width: 100%;
-    max-width: 992px;
+    max-width: 1168px;
     margin: 0 auto;
 
     &:nth-child(even) ${Article} {
@@ -34,56 +33,93 @@ const CardFrame = styled.div`
             flex-direction: column-reverse;
         }
     }
+
+    &:nth-child(even) img {
+        border-right: 1px solid ${theme.colors.dark};
+        border-left: 0;
+
+        @media ${theme.media.projectStack} {
+            border-right: 0;
+        }
+    }
 `;
 
 const Picture = styled.img`
-    flex: 0 0 50%;
-    width: 50%;
-    height: 524px;
+    flex: 0 0 56%;
+    width: 56%;
+    height: 560px;
     object-fit: cover;
+    border-left: 1px solid ${theme.colors.dark};
+    filter: saturate(0.86);
+    transition: filter 0.3s ease, transform 0.4s ease;
+
+    ${Article}:hover & {
+        filter: saturate(1);
+        transform: scale(1.015);
+    }
 
     @media ${theme.media.projectStack} {
         flex-basis: auto;
         width: 100%;
-        height: 524px;
+        height: min(70vw, 540px);
+        border-bottom: 1px solid ${theme.colors.dark};
+        border-left: 0;
     }
 
     @media screen and (max-width: 374px) {
-        height: clamp(440px, 140vw, 524px);
+        height: 420px;
     }
 `;
 
 const ProjectName = styled.h3`
     margin: 0;
-    font-family: "Playfair Display", serif;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 40px;
-    line-height: 1.5;
+    font-size: clamp(34px, 4vw, 50px);
+    line-height: 1;
+    letter-spacing: -0.05em;
     color: ${theme.colors.titleFont};
+`;
+
+const ProjectLabel = styled.span`
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: ${theme.colors.accent};
+
+    &::before {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        content: "";
+        background: ${theme.colors.signal};
+    }
 `;
 
 const Wrapper = styled.div`
     display: flex;
-    flex: 1 1 50%;
+    flex: 1 1 44%;
     flex-direction: column;
     justify-content: center;
     gap: 24px;
     min-width: 0;
-    padding: 80px 38px 80px 50px;
+    padding: 64px clamp(32px, 4vw, 58px);
 
     @media ${theme.media.projectStack} {
         flex-basis: auto;
-        min-height: 523px;
-        padding: 80px 35px;
+        min-height: 440px;
+        padding: 60px 40px;
     }
 
     @media ${theme.media.mobile} {
-        padding: 80px 35px;
-    }
-
-    @media screen and (max-width: 374px) {
-        padding-inline: 24px;
+        min-height: 400px;
+        padding: 52px 28px;
     }
 `;
 
-export const S = {CardFrame, Article, Picture, ProjectName, Wrapper};
+export const S = {CardFrame, Article, Picture, ProjectName, ProjectLabel, Wrapper};

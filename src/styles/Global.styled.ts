@@ -12,6 +12,7 @@ export const GlobalStyle = createGlobalStyle`
 
     html {
         scroll-behavior: smooth;
+        background: ${theme.colors.primaryBG};
     }
 
     @font-face {
@@ -81,8 +82,14 @@ export const GlobalStyle = createGlobalStyle`
     body {
         min-width: 320px;
         overflow-x: hidden;
-        font-family: Nunito, Roboto, "Playfair Display", Raleway, Comfortaa, serif;
+        font-family: Nunito, Arial, sans-serif;
+        line-height: 1.5;
+        color: ${theme.colors.titleFont};
         background: ${theme.colors.primaryBG};
+        background-image:
+            linear-gradient(rgba(49, 84, 245, 0.035) 1px, transparent 1px),
+            linear-gradient(90deg, rgba(49, 84, 245, 0.035) 1px, transparent 1px);
+        background-size: 32px 32px;
     }
 
     a {
@@ -90,12 +97,23 @@ export const GlobalStyle = createGlobalStyle`
         cursor: pointer;
     }
 
+    button,
+    input,
+    textarea {
+        font: inherit;
+    }
+
+    ::selection {
+        color: #fff;
+        background: ${theme.colors.accent};
+    }
+
     ul {
         list-style: none;
     }
 
     section {
-        scroll-margin-top: 72px;
+        scroll-margin-top: 88px;
     }
 
     :focus-visible {

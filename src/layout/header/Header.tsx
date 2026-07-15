@@ -23,7 +23,8 @@ export const Header: React.FC = () => {
             <Container>
                 <FlexWrapper justify="space-between" align="center">
                     <S.LogoLink href="#about" aria-label="Go to the About section">
-                        Yaroslau Kvachonak
+                        <S.LogoMark aria-hidden="true">YK</S.LogoMark>
+                        <S.LogoName>Yaroslau Kvachonak</S.LogoName>
                     </S.LogoLink>
                     <DesktopMenu menuItems={navigationItems}/>
                     <MobileMenu menuItems={navigationItems}/>

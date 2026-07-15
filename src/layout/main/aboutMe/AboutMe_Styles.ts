@@ -4,13 +4,14 @@ import {theme} from "../../../styles/Theme.ts";
 const StyledAboutMe = styled.section`
     position: relative;
     overflow: clip;
-    min-height: 678px;
+    min-height: 780px;
+    padding-top: 72px;
 
     p {
-        width: 100%;
-        margin-bottom: 32px;
-        font-size: 24px;
-        line-height: 1.5;
+        max-width: 620px;
+        margin-bottom: 36px;
+        font-size: clamp(18px, 2vw, 22px);
+        line-height: 1.6;
     }
 
     @media ${theme.media.projectStack} {
@@ -20,12 +21,14 @@ const StyledAboutMe = styled.section`
 
 const HeroContent = styled.div`
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: minmax(0, 1.08fr) minmax(420px, 0.92fr);
+    gap: clamp(40px, 6vw, 88px);
+    align-items: center;
     position: relative;
     width: 100%;
     min-width: 0;
     max-width: 100%;
-    min-height: 678px;
+    min-height: 708px;
 
     @media ${theme.media.projectStack} {
         display: flex;
@@ -50,12 +53,12 @@ const BlockInfo = styled.div`
     z-index: 2;
     width: 100%;
     min-width: 0;
-    max-width: 508px;
-    padding: 111px 0 80px;
+    max-width: 660px;
+    padding: 100px 0 90px;
 
     @media ${theme.media.projectStack} {
         max-width: 100%;
-        padding: 50px 0 90px;
+        padding: 76px 0 80px;
     }
 
     @media ${theme.media.mobile} {
@@ -64,40 +67,42 @@ const BlockInfo = styled.div`
 `;
 
 const StyledProfession = styled.div`
-    min-height: 27px;
-    margin: 0 0 12px;
-    font-family: "Nunito", sans-serif;
-    font-weight: 700;
-    font-size: 20px;
-    line-height: 1.35;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 28px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 1;
+    letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: ${theme.colors.accent};
+    color: ${theme.colors.textFont};
+`;
 
-    > span {
-        display: none;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        > span {
-            display: block;
-        }
-
-        .Typewriter {
-            display: none;
-        }
-    }
+const StatusDot = styled.span`
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: ${theme.colors.signal};
+    box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.15);
 `;
 
 const StyledSectionTitle = styled.h1`
-    margin: 0 0 32px;
+    max-width: 700px;
+    margin: 0 0 34px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 64px;
-    line-height: 1.2;
+    font-size: clamp(54px, 7vw, 92px);
+    line-height: 0.96;
+    letter-spacing: -0.065em;
     color: ${theme.colors.titleFont};
 
-    @media ${theme.media.tablet} {
-        font-size: 42px;
+    em {
+        font-family: Raleway, sans-serif;
+        font-weight: 500;
+        font-style: normal;
+        color: ${theme.colors.accent};
     }
 `;
 
@@ -107,6 +112,7 @@ export const S = {
     InfoContent,
     Actions,
     StyledProfession,
+    StatusDot,
     StyledSectionTitle,
     BlockInfo,
 };

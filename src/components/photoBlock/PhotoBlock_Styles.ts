@@ -1,99 +1,142 @@
 import styled from "styled-components";
 import {theme} from "../../styles/Theme.ts";
-import topBorder from "../../assets/img/topBorder.svg";
-import topBorderMask from "../../assets/img/topBorder-mask.svg?url";
 
 const PhotoBlock = styled.div`
-    position: absolute;
-    top: 0;
-    right: -120px;
+    position: relative;
     z-index: 1;
-    width: 720px;
-    height: 629px;
+    width: 100%;
+    max-width: 520px;
+    border: 1px solid ${theme.colors.dark};
+    border-radius: 8px;
+    background: ${theme.colors.secondaryBG};
+    box-shadow: 18px 18px 0 rgba(49, 84, 245, 0.15);
+    transform: rotate(1.25deg);
 
     @media ${theme.media.projectStack} {
-        position: relative;
         order: -1;
-        top: auto;
-        right: auto;
         align-self: center;
-        width: calc(65.84vw + 128.1px);
-        height: calc(41.22vw + 258.4px);
+        margin-top: 36px;
     }
 
-    @media screen and (max-width: 375px) {
-        align-self: flex-start;
-        width: 100vw;
-        height: 110.13vw;
-        margin-inline: -15px;
+    @media ${theme.media.mobile} {
+        box-shadow: 10px 10px 0 rgba(49, 84, 245, 0.15);
+        transform: none;
     }
 `;
 
-const PhotoBackground = styled.div`
+const ViewportBar = styled.div`
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    min-height: 46px;
+    padding: 0 14px;
+    border-bottom: 1px solid ${theme.colors.dark};
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 11px;
+    color: ${theme.colors.textFont};
+`;
+
+const WindowControls = styled.span`
+    display: flex;
+    gap: 5px;
+
+    i {
+        display: block;
+        width: 7px;
+        height: 7px;
+        border: 1px solid ${theme.colors.dark};
+        border-radius: 50%;
+    }
+
+    i:first-child {
+        background: ${theme.colors.signal};
+    }
+`;
+
+const LiveLabel = styled.span`
+    justify-self: end;
+    color: ${theme.colors.accent};
+`;
+
+const PhotoCanvas = styled.div`
+    position: relative;
+    height: clamp(420px, 44vw, 570px);
+    overflow: hidden;
+    background: #dce4f0;
+`;
+
+const PhotoGrid = styled.div`
     position: absolute;
-    top: -248px;
-    left: 0;
-    z-index: -2;
-    width: 778px;
-    height: 878px;
-    background: url("${topBorder}") no-repeat top left / 778px 878px;
-
-    @media ${theme.media.projectStack} {
-        top: calc(-21.18vw - 57.6px);
-        width: calc(55.73vw + 277px);
-        height: calc(62.6vw + 315.3px);
-        background-size: 100% 100%;
-    }
-
-    @media screen and (max-width: 375px) {
-        top: -36.53vw;
-        width: 129.6vw;
-        height: 146.67vw;
-        background-size: 100% 100%;
-    }
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background-image:
+        linear-gradient(rgba(12, 21, 48, 0.13) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(12, 21, 48, 0.13) 1px, transparent 1px);
+    background-size: 25% 25%;
 `;
 
 const PhotoMask = styled.div`
     position: absolute;
-    top: -248px;
-    left: 0;
-    z-index: -1;
-    width: 778px;
-    height: 878px;
-    mask: url("${topBorderMask}") no-repeat center / 100% 100%;
-
-    @media ${theme.media.projectStack} {
-        top: calc(-21.18vw - 57.6px);
-        width: calc(55.73vw + 277px);
-        height: calc(62.6vw + 315.3px);
-    }
-
-    @media screen and (max-width: 375px) {
-        top: -36.53vw;
-        width: 129.6vw;
-        height: 146.67vw;
-    }
+    inset: 0;
+    overflow: hidden;
 `;
 
 const Photo = styled.img`
-    position: absolute;
-    top: 278px;
-    left: 76px;
-    width: 612px;
-    height: auto;
-    max-width: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 17%;
+    filter: saturate(0.82) contrast(1.03);
+`;
 
-    @media ${theme.media.projectStack} {
-        top: calc(62.6vw - 284.8px);
-        left: calc(19.08vw - 95.6px);
-        width: calc(7.63vw + 543.4px);
+const AxisLabel = styled.span<{$side: "top" | "left"}>`
+    position: absolute;
+    z-index: 2;
+    ${({$side}) => $side === "top" ? "top: 12px; right: 14px;" : "bottom: 12px; left: 14px;"}
+    display: grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border: 1px solid ${theme.colors.dark};
+    border-radius: 50%;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 11px;
+    color: ${theme.colors.dark};
+    background: rgba(251, 252, 254, 0.82);
+`;
+
+const Breakpoints = styled.div`
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    min-height: 44px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 10px;
+    color: ${theme.colors.textFont};
+
+    span {
+        display: flex;
+        align-items: center;
+        padding-left: 12px;
+        border-right: 1px solid ${theme.colors.line};
     }
 
-    @media screen and (max-width: 375px) {
-        top: -13.33vw;
-        left: -6.4vw;
-        width: 152.53vw;
+    span:last-child {
+        justify-content: flex-end;
+        padding-right: 12px;
+        border-right: 0;
     }
 `;
 
-export const S = {PhotoBlock, PhotoBackground, PhotoMask, Photo};
+export const S = {
+    PhotoBlock,
+    ViewportBar,
+    WindowControls,
+    LiveLabel,
+    PhotoCanvas,
+    PhotoGrid,
+    PhotoMask,
+    Photo,
+    AxisLabel,
+    Breakpoints,
+};

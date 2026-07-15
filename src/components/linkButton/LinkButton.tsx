@@ -26,18 +26,24 @@ export const LinkButton = (props: ButtonProps) => {
 
 
 const StyledLinkButton = styled.a`
-    border: 2px solid #25282b;
-    border-radius: 8px;
-    padding: 8px 24px;
-    width: 117px;
-    height: 43px;
-    font-family: "Roboto", sans-serif;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    min-height: 48px;
+    padding: 10px 20px;
+    border: 1px solid ${theme.colors.titleFont};
+    border-radius: 4px;
+    font-family: Raleway, sans-serif;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 14px;
+    line-height: 1;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
     white-space: nowrap;
-    color: #25282b;
-    transition: background-color 0.2s, border-color 0.2s, color 0.2s, box-shadow 0.2s;
+    color: ${theme.colors.titleFont};
+    background: transparent;
+    transition: transform 0.2s ease, background-color 0.2s, border-color 0.2s, color 0.2s;
 
     &[aria-disabled="true"] {
         cursor: default;
@@ -48,7 +54,6 @@ const StyledLinkButton = styled.a`
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
         color: white;
-        box-shadow: 0 6px 18px rgba(6, 104, 246, 0.2);
+        transform: translateY(-2px);
     }
-    
-`
+`;

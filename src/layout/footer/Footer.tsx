@@ -12,6 +12,7 @@ export const Footer: React.FC = () => {
             <Container>
                 <Fade triggerOnce duration={450} fraction={0.1}>
                     <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
+                        <S.FooterLabel>Elsewhere on the web</S.FooterLabel>
                         <S.Social>
                             <a href={"https://t.me/ya_yareekk"} aria-label={"telegram"} target={"_blank"} rel="noreferrer"><Icons
                                 iconId="tg"
@@ -27,7 +28,7 @@ export const Footer: React.FC = () => {
                                                         height="48px"
                                                         viewBox="0 0  48 48"/></a>
                         </S.Social>
-                        <S.Reserved>© {new Date().getFullYear()} Yaroslau Kvachonak, All Rights Reserved.</S.Reserved>
+                        <S.Reserved>© {new Date().getFullYear()} Yaroslau Kvachonak · Built with React and TypeScript.</S.Reserved>
                     </FlexWrapper>
                 </Fade>
             </Container>

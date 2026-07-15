@@ -7,37 +7,36 @@ type SectionTitleProps = {
 
 export const SectionTitle = (props: SectionTitleProps) => {
     return (
-        <SectiontitleStyled>
+        <SectiontitleStyled data-section={`/${props.title.toLowerCase().replace(/\s+/g, "-")}`}>
             {props.title}
         </SectiontitleStyled>
     );
 };
 
 const SectiontitleStyled = styled.h2`
-    margin: 0 0 80px;
-    font-family: "Playfair Display",serif;
+    margin: 0 0 64px;
+    font-family: "Roboto", sans-serif;
     font-weight: 700;
-    font-size: 48px;
-    line-height: 1.5;
-    text-align: center;
+    font-size: clamp(40px, 6vw, 72px);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
     color: ${theme.colors.titleFont};
-    
     position: relative;
-    
+
     &::before {
-        position: absolute;
-        content: "";
-        border-radius: 2px;
-        width: 100px;
-        height: 4px;
-        background: ${theme.colors.accent};
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: -4px;
+        display: block;
+        margin-bottom: 16px;
+        content: attr(data-section);
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-weight: 600;
+        font-size: 12px;
+        line-height: 1;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: ${theme.colors.accent};
     }
 
     @media ${theme.media.mobile} {
-        margin-bottom: 50px;
-        font-size: 40px;
+        margin-bottom: 42px;
     }
-`
+`;

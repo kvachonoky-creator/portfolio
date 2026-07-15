@@ -28,8 +28,8 @@ export const Projects = () => {
 
 const StyledProjects = styled.section`
     position: relative;
-    padding: 75px 0 69px;
-    background-color: ${theme.colors.primaryBG};
+    padding: 120px 0;
+    background-color: transparent;
 
     @media ${theme.media.mobile} {
         padding: 80px 0;
@@ -39,7 +39,7 @@ const StyledProjects = styled.section`
 const ProjectList = styled.div`
     display: flex;
     flex-direction: column;
-    gap: 80px;
+    gap: 96px;
 
     @media ${theme.media.mobile} {
         gap: 50px;

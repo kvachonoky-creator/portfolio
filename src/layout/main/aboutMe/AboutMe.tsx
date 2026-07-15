@@ -3,8 +3,7 @@ import {Container} from "../../../components/container/Container.ts";
 import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 import {PhotoBlock} from "../../../components/photoBlock/PhotoBlock.tsx";
 import React from "react";
-import {S} from "./AboutMe_Styles.ts"
-import Typewriter from 'typewriter-effect';
+import {S} from "./AboutMe_Styles.ts";
 
 
 export const AboutMe: React.FC = () => {
@@ -15,22 +14,18 @@ export const AboutMe: React.FC = () => {
                     <S.BlockInfo>
                         <S.InfoContent>
                             <S.StyledProfession>
-                                <span>frontend developer</span>
-                                <Typewriter
-                                options={{
-                                    strings: ["frontend developer"],
-                                    autoStart: true,
-                                    loop: true,
-                                }}
-                            />
+                                <S.StatusDot aria-hidden="true"/>
+                                Frontend developer · open to work
                             </S.StyledProfession>
-                            <S.StyledSectionTitle>Hello, my name is Yaroslau</S.StyledSectionTitle>
+                            <S.StyledSectionTitle>
+                                I build interfaces that <em>hold up</em> in the real world.
+                            </S.StyledSectionTitle>
                             <SectionText
-                                title={"I’m a frontend developer experienced in building cross-browser, responsive web applications with TypeScript, React, and Redux. I’m open to new opportunities and would be happy to work with you."}
+                                title={"I’m Yaroslau, a frontend developer focused on responsive, cross-browser products built with TypeScript, React, and Redux."}
                             />
                             <S.Actions>
-                                <LinkButton href={"#projects"} title={"Projects"}/>
-                                <LinkButton href={"https://www.linkedin.com/in/kyarek/"} title={"LinkedIn"}/>
+                                <LinkButton href="#projects" title="Explore projects"/>
+                                <LinkButton href="https://www.linkedin.com/in/kyarek/" title="LinkedIn"/>
                             </S.Actions>
                         </S.InfoContent>
                     </S.BlockInfo>

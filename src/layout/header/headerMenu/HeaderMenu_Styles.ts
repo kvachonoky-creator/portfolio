@@ -1,15 +1,37 @@
 import styled, {css} from "styled-components";
+import {theme} from "../../../styles/Theme.ts";
 
 const ListItem = styled.li`
 `
 
 const Link = styled.a`
-    font-family: Raleway;
+    position: relative;
+    font-family: Raleway, sans-serif;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 156%;
-    color: #25282b;
-`
+    font-size: 13px;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: ${theme.colors.titleFont};
+
+    &::after {
+        position: absolute;
+        right: 0;
+        bottom: -8px;
+        left: 0;
+        height: 2px;
+        content: "";
+        background: ${theme.colors.signal};
+        transform: scaleX(0);
+        transform-origin: right;
+        transition: transform 0.2s ease;
+    }
+
+    &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+    }
+`;
 
 
 // mobile menu
@@ -24,8 +46,8 @@ const MobileMenu = styled.nav`
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
-    background-color: rgba(249, 250, 255, 0.96);
-    backdrop-filter: blur(10px);
+    background-color: rgba(233, 238, 246, 0.97);
+    backdrop-filter: blur(18px);
     top: 0;
     left: 0;
     right: 0;
@@ -45,7 +67,10 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
         flex-direction: column;
         align-items: center;
     }
-`
+    ${Link} {
+        font-size: 22px;
+    }
+`;
 
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -54,8 +79,8 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     background-color: rgba(255, 255, 255, 0);
     border: none;
     cursor: pointer;
@@ -65,7 +90,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         display: block;
         width: 18px;
         height: 2px;
-        background-color: #25282b;
+        background-color: ${theme.colors.titleFont};
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             background-color: rgba(135, 28, 28, 0);
         `}
@@ -77,10 +102,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         display: block;
         width: 18px;
         height: 2px;
-        background-color: #25282b;
+        background-color: ${theme.colors.titleFont};
         position: absolute;
-        top: 13px;
-        left: 5px;
+        top: 19px;
+        left: 11px;
         transform: translateY(-6px);
         z-index: 99999;
 
@@ -94,10 +119,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         display: block;
         width: 18px;
         height: 2px;
-        background-color: #25282b;
+        background-color: ${theme.colors.titleFont};
         position: absolute;
-        top: 13px;
-        left: 5px;
+        top: 19px;
+        left: 11px;
         transform: translateY(6px);
         z-index: 99999;
 
@@ -106,7 +131,7 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         `}
 
     }
-`
+`;
 
 
 // desktop menu
@@ -118,9 +143,9 @@ const DesktopMenu = styled.nav`
 
     ul {
         display: flex;
-        gap: 48px;
+        gap: 36px;
     }
-`
+`;
 
 export const S = {
     ListItem,

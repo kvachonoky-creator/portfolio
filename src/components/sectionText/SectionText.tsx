@@ -15,9 +15,9 @@ export const SectionText = ({title} : SectionTextProps) => {
 
 
 const SectionTextStyled = styled.p`
-    font-family: "Nunito", serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 400;
     font-size: 18px;
-    line-height: 1.5;
+    line-height: 1.65;
     color: ${theme.colors.textFont};
-`
+`;

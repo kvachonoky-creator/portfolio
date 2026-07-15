@@ -1,56 +1,55 @@
 import styled from "styled-components";
-import bottomBorder from "../../assets/img/bottomBorder.svg?url";
 import {theme} from "../../styles/Theme.ts";
 
 const Footer = styled.footer`
     position: relative;
-    z-index: 1;
-    padding-top: 56px;
-    padding-bottom: 264px;
-    overflow: hidden;
-    background: ${theme.colors.primaryBG};
+    padding: 54px 0 60px;
+    border-top: 1px solid #34405c;
+    color: #fff;
+    background: ${theme.colors.dark};
+`;
 
-    &::after {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        z-index: -1;
-        width: 100%;
-        height: 344px;
-        content: "";
-        background: url("${bottomBorder}") no-repeat center bottom / 100% 100%;
-    }
-
-    @media ${theme.media.mobile} {
-        padding-bottom: 177px;
-
-        &::after {
-            height: 98px;
-        }
-    }
+const FooterLabel = styled.span`
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #8290aa;
 `;
 
 const Social = styled.div`
     display: flex;
-    gap: 24px;
+    gap: 14px;
 
     a {
-        transition: transform 0.2s;
+        display: grid;
+        place-items: center;
+        width: 48px;
+        height: 48px;
+        border: 1px solid #46536d;
+        border-radius: 50%;
+        color: #fff;
+        transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+
+        svg {
+            width: 26px;
+            height: 26px;
+        }
 
         &:hover {
-            transform: scale(1.2);
+            border-color: ${theme.colors.signal};
+            color: ${theme.colors.signal};
+            transform: translateY(-3px);
         }
     }
 `;
 
 const Reserved = styled.small`
-    position: relative;
-    z-index: 2;
-    font-family: "Nunito", serif;
+    font-family: "Nunito", sans-serif;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 13px;
     text-align: center;
-    color: ${theme.colors.textFont};
+    color: #8290aa;
 `;
 
-export const S = {Footer, Social, Reserved};
+export const S = {Footer, FooterLabel, Social, Reserved};
