@@ -48,14 +48,15 @@ const Picture = styled.img`
     flex: 0 0 56%;
     width: 56%;
     height: 560px;
-    object-fit: cover;
+    object-fit: contain;
+    object-position: center;
     border-left: 1px solid ${theme.colors.dark};
+    background: #dce4f0;
     filter: saturate(0.86);
-    transition: filter 0.3s ease, transform 0.4s ease;
+    transition: filter 0.3s ease;
 
     ${Article}:hover & {
         filter: saturate(1);
-        transform: scale(1.015);
     }
 
     @media ${theme.media.projectStack} {

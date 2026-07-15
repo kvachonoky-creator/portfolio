@@ -45,13 +45,6 @@ const ContactIntro = styled.div`
         color: #aebbd0;
     }
 
-    a {
-        display: inline-block;
-        border-bottom: 1px solid ${theme.colors.signal};
-        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-        font-size: 14px;
-        color: #fff;
-    }
 `;
 
 const Availability = styled.div`

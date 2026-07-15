@@ -88,6 +88,24 @@ const StatusDot = styled.span`
     box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.15);
 `;
 
+const TypewriterWrap = styled.span`
+    min-width: 0;
+
+    > span {
+        display: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        > span {
+            display: inline;
+        }
+
+        .Typewriter {
+            display: none;
+        }
+    }
+`;
+
 const StyledSectionTitle = styled.h1`
     max-width: 700px;
     margin: 0 0 34px;
@@ -113,6 +131,7 @@ export const S = {
     Actions,
     StyledProfession,
     StatusDot,
+    TypewriterWrap,
     StyledSectionTitle,
     BlockInfo,
 };

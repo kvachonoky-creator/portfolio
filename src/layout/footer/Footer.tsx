@@ -12,20 +12,19 @@ export const Footer: React.FC = () => {
             <Container>
                 <Fade triggerOnce duration={450} fraction={0.1}>
                     <FlexWrapper direction={"column"} align={"center"} gap={"32px"}>
-                        <S.FooterLabel>Elsewhere on the web</S.FooterLabel>
                         <S.Social>
-                            <a href={"https://t.me/ya_yareekk"} aria-label={"telegram"} target={"_blank"} rel="noreferrer"><Icons
+                            <a href={"https://t.me/ya_yareekk"} aria-label={"Telegram"} target={"_blank"} rel="noreferrer"><Icons
                                 iconId="tg"
-                                width="48px" height="48px"
-                                viewBox="0 0 40 40"/></a>
+                                width="26px" height="26px"
+                                viewBox="4 0 40 40"/></a>
                             <a href={"https://www.instagram.com/ya_yarek/?igsh=Y21oNWJuY28xbWhh#"}
-                               aria-label={"instagram"} target={"_blank"} rel="noreferrer"><Icons
-                                iconId="inst" width="48px" height="48px"
+                               aria-label={"Instagram"} target={"_blank"} rel="noreferrer"><Icons
+                                iconId="inst" width="26px" height="26px"
                                 viewBox="0 0 48 48"/></a>
-                            <a href={"https://www.linkedin.com/in/kyarek/"} aria-label={"linkedin"}
+                            <a href={"https://www.linkedin.com/in/kyarek/"} aria-label={"LinkedIn"}
                                target={"_blank"} rel="noreferrer"><Icons iconId="linkedin"
-                                                        width="48px"
-                                                        height="48px"
+                                                        width="26px"
+                                                        height="26px"
                                                         viewBox="0 0  48 48"/></a>
                         </S.Social>
                         <S.Reserved>© {new Date().getFullYear()} Yaroslau Kvachonak · Built with React and TypeScript.</S.Reserved>

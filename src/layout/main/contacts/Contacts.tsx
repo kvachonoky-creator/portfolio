@@ -51,7 +51,6 @@ export const Contacts = () => {
                             <S.Availability><span/>Available for new projects</S.Availability>
                             <h3>Have a product that needs a careful frontend?</h3>
                             <p>Tell me what you’re building, what is already working, and where the interface needs help.</p>
-                            <a href="mailto:yarek.dev@gmail.com">yarek.dev@gmail.com</a>
                         </S.ContactIntro>
                         <S.Form ref={form} onSubmit={sendEmail}>
                             {inputType.map((t) => {

@@ -4,6 +4,7 @@ import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 import {PhotoBlock} from "../../../components/photoBlock/PhotoBlock.tsx";
 import React from "react";
 import {S} from "./AboutMe_Styles.ts";
+import Typewriter from "typewriter-effect";
 
 
 export const AboutMe: React.FC = () => {
@@ -15,16 +16,27 @@ export const AboutMe: React.FC = () => {
                         <S.InfoContent>
                             <S.StyledProfession>
                                 <S.StatusDot aria-hidden="true"/>
-                                Frontend developer · open to work
+                                <S.TypewriterWrap>
+                                    <span>Frontend developer · open to work</span>
+                                    <Typewriter
+                                        options={{
+                                            strings: ["Frontend developer · open to work"],
+                                            autoStart: true,
+                                            loop: true,
+                                            delay: 55,
+                                            deleteSpeed: 25,
+                                        }}
+                                    />
+                                </S.TypewriterWrap>
                             </S.StyledProfession>
                             <S.StyledSectionTitle>
-                                I build interfaces that <em>hold up</em> in the real world.
+                                Hello, my name is <em>Yaroslau</em>
                             </S.StyledSectionTitle>
                             <SectionText
-                                title={"I’m Yaroslau, a frontend developer focused on responsive, cross-browser products built with TypeScript, React, and Redux."}
+                                title={"I’m a frontend developer experienced in building cross-browser, responsive web applications with TypeScript, React, and Redux. I’m open to new opportunities and would be happy to work with you."}
                             />
                             <S.Actions>
-                                <LinkButton href="#projects" title="Explore projects"/>
+                                <LinkButton href="#projects" title="Projects"/>
                                 <LinkButton href="https://www.linkedin.com/in/kyarek/" title="LinkedIn"/>
                             </S.Actions>
                         </S.InfoContent>
