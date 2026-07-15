@@ -14,13 +14,13 @@ export const SectionTitle = (props: SectionTitleProps) => {
 };
 
 const SectiontitleStyled = styled.h2`
-    margin-bottom: 88px;
+    margin: 0 0 80px;
     font-family: "Playfair Display",serif;
     font-weight: 700;
     font-size: 48px;
     line-height: 1.5;
     text-align: center;
-    color: #25282b;
+    color: ${theme.colors.titleFont};
     
     position: relative;
     
@@ -34,5 +34,10 @@ const SectiontitleStyled = styled.h2`
         left: 50%;
         transform: translateX(-50%);
         bottom: -4px;
+    }
+
+    @media ${theme.media.mobile} {
+        margin-bottom: 50px;
+        font-size: 40px;
     }
 `

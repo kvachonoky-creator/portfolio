@@ -5,7 +5,7 @@ const Contacts = styled.section`
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 55px 0;
+    padding: 75px 0 0;
     position: relative;
     background-color: ${theme.colors.primaryBG};
 `
@@ -20,6 +20,8 @@ const Form = styled.form`
 `
 
 const Field = styled.input`
+    width: 100%;
+    height: 40px;
     border: 1px solid #e8ecf4;
     border-radius: 8px;
     padding: 4px 8px;
@@ -66,10 +68,11 @@ const Button = styled.button`
     color: #ffffff;
     cursor: pointer;
     align-self: end;
-    transition: transform 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
 
     &:hover {
-        transform: translateY(-5px);
+        background-color: #055ddc;
+        box-shadow: 0 6px 18px rgba(6, 104, 246, 0.2);
     }
 `
 

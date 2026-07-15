@@ -2,74 +2,111 @@ import styled from "styled-components";
 import {theme} from "../../../styles/Theme.ts";
 
 const StyledAboutMe = styled.section`
-    margin-bottom: 116px;
     position: relative;
-    overflow-x: clip;
+    overflow: clip;
+    min-height: 678px;
 
     p {
-        font-size: 24px;
-        margin-bottom: 32px;
         width: 100%;
-
-        @media screen and (max-width: 1000px){
-            max-width: none;
-        }
+        margin-bottom: 32px;
+        font-size: 24px;
+        line-height: 1.5;
     }
-    
-`
+
+    @media ${theme.media.projectStack} {
+        min-height: 0;
+    }
+`;
+
+const HeroContent = styled.div`
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+    min-height: 678px;
+
+    @media ${theme.media.projectStack} {
+        display: flex;
+        flex-direction: column;
+        min-height: 0;
+    }
+`;
+
+const InfoContent = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
+
+const Actions = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+`;
 
 const BlockInfo = styled.div`
-    padding: 55px 0 72px;
-    max-width: 550px;
-    width: 100%;
     position: relative;
     z-index: 2;
+    width: 100%;
+    min-width: 0;
+    max-width: 508px;
+    padding: 111px 0 80px;
 
-    @media screen and (max-width: 1150px) {
-        margin-top: 600px; // поменять
-        max-width: none;
+    @media ${theme.media.projectStack} {
+        max-width: 100%;
+        padding: 50px 0 90px;
     }
 
-    @media ${theme.media.tablet} {
-        margin-top: 650px;// поменять
-    }
-    
     @media ${theme.media.mobile} {
-        margin-top: 650px; // поменять
+        width: calc(100vw - 30px);
     }
-`
+`;
 
-const StyledMainTitle = styled.h1`
-    margin-top: 55px;
-    margin-bottom: 12px;
+const StyledProfession = styled.div`
+    min-height: 27px;
+    margin: 0 0 12px;
     font-family: "Nunito", sans-serif;
     font-weight: 700;
     font-size: 20px;
+    line-height: 1.35;
     text-transform: uppercase;
     color: ${theme.colors.accent};
-    
-    p {
+
+    > span {
         display: none;
     }
-    
-`
 
-const StyledSectionTitle = styled.h2`
+    @media (prefers-reduced-motion: reduce) {
+        > span {
+            display: block;
+        }
+
+        .Typewriter {
+            display: none;
+        }
+    }
+`;
+
+const StyledSectionTitle = styled.h1`
+    margin: 0 0 32px;
     font-family: "Roboto", sans-serif;
     font-weight: 700;
     font-size: 64px;
     line-height: 1.2;
     color: ${theme.colors.titleFont};
-    margin-bottom: 32px;
 
     @media ${theme.media.tablet} {
         font-size: 42px;
     }
-`
+`;
 
-export const  S = {
+export const S = {
     StyledAboutMe,
-    StyledMainTitle,
+    HeroContent,
+    InfoContent,
+    Actions,
+    StyledProfession,
     StyledSectionTitle,
     BlockInfo,
-}
+};

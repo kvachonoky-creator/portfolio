@@ -1,5 +1,4 @@
 import {LinkButton} from "../../../components/linkButton/LinkButton.tsx";
-import {FlexWrapper} from "../../../components/flexWrapper/FlexWrapper.tsx";
 import {Container} from "../../../components/container/Container.ts";
 import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 import {PhotoBlock} from "../../../components/photoBlock/PhotoBlock.tsx";
@@ -10,13 +9,13 @@ import Typewriter from 'typewriter-effect';
 
 export const AboutMe: React.FC = () => {
     return (
-        <S.StyledAboutMe id="About">
+        <S.StyledAboutMe id="about">
             <Container>
-                <FlexWrapper>
+                <S.HeroContent>
                     <S.BlockInfo>
-                        <FlexWrapper direction="column" gap={"0px"}>
-                            <S.StyledMainTitle>
-                                <p>frontend developer</p>
+                        <S.InfoContent>
+                            <S.StyledProfession>
+                                <span>frontend developer</span>
                                 <Typewriter
                                 options={{
                                     strings: ["frontend developer"],
@@ -24,19 +23,19 @@ export const AboutMe: React.FC = () => {
                                     loop: true,
                                 }}
                             />
-                            </S.StyledMainTitle>
-                            <span><S.StyledSectionTitle>Hello, my name is Yaroslau Kvachonak</S.StyledSectionTitle></span>
+                            </S.StyledProfession>
+                            <S.StyledSectionTitle>Hello, my name is Yaroslau</S.StyledSectionTitle>
                             <SectionText
-                                title={"I am a frontend developer. I have experience in cross-browser adaptive and responsive web application development. I create with TypeScript, React, Redux. I will be glad to join and work with you!"}
+                                title={"I’m a frontend developer experienced in building cross-browser, responsive web applications with TypeScript, React, and Redux. I’m open to new opportunities and would be happy to work with you."}
                             />
-                            <FlexWrapper gap="12px">
-                                <LinkButton href={"#"} title={"Projects"}/>
+                            <S.Actions>
+                                <LinkButton href={"#projects"} title={"Projects"}/>
                                 <LinkButton href={"https://www.linkedin.com/in/kyarek/"} title={"LinkedIn"}/>
-                            </FlexWrapper>
-                        </FlexWrapper>
+                            </S.Actions>
+                        </S.InfoContent>
                     </S.BlockInfo>
-                        <PhotoBlock/>
-                </FlexWrapper>
+                    <PhotoBlock/>
+                </S.HeroContent>
             </Container>
         </S.StyledAboutMe>
     );

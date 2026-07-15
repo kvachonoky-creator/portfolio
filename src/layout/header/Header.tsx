@@ -1,45 +1,32 @@
 import {Container} from "../../components/container/Container.ts";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
 import {DesktopMenu} from "./headerMenu/desktopMenu/DesktopMenu.tsx";
-import {Icons} from "../../components/icons/Icons.tsx";
 import {MobileMenu} from "./headerMenu/mobileMenu/mobileMenu.tsx";
 import * as React from "react";
 import {S} from "./Header_Styles.ts"
-import {useState} from "react";
+import {navigationItems} from "../../data/navigation.ts";
 
 export const Header: React.FC = () => {
-
-    const menuTitle = ["About", "Project", "Contacts"]
-
-
-    const [width, setWidth] = React.useState(window.innerWidth);
-    const breakpoint = 768;
-
-    const [blurHeder, setBlurHeader] = useState(false);
+    const [isScrolled, setIsScrolled] = React.useState(false);
 
     React.useEffect(() => {
-        const handleWindowResize = () => setWidth(window.innerWidth);
-        window.addEventListener("resize", handleWindowResize);
-        return () => window.removeEventListener("resize", handleWindowResize);
-    }, [])
+        const handleScroll = () => setIsScrolled(window.scrollY > 24);
 
-    React.useEffect(() => {
-        window.addEventListener("scroll", () => {
-            width < breakpoint
-                ? window.scrollY > 700 ? setBlurHeader(true) : setBlurHeader(false)
-                : window.scrollY > 50 ? setBlurHeader(true) : setBlurHeader(false)
-        })
-    })
+        handleScroll();
+        window.addEventListener("scroll", handleScroll, {passive: true});
+
+        return () => window.removeEventListener("scroll", handleScroll);
+    }, []);
 
     return (
-        <S.Header style={blurHeder ? {backdropFilter: "blur(4px)", backgroundColor: "rgba(6,104,246,0.3)"} : undefined}>
+        <S.Header $isScrolled={isScrolled}>
             <Container>
                 <FlexWrapper justify="space-between" align="center">
-                    <S.LogoLink href="#">
-                        <Icons iconId={"logo"} width={"300px"} height={"15px"} viewBox={"0 0 300 15"}/>
+                    <S.LogoLink href="#about" aria-label="Go to the About section">
+                        Yaroslau Kvachonak
                     </S.LogoLink>
-                    {width < breakpoint ? <MobileMenu menuItem={menuTitle}/> :
-                        <DesktopMenu menuItem={menuTitle}/>}
+                    <DesktopMenu menuItems={navigationItems}/>
+                    <MobileMenu menuItems={navigationItems}/>
                 </FlexWrapper>
             </Container>
         </S.Header>

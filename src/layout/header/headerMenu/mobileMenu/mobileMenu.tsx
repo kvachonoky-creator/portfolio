@@ -1,21 +1,50 @@
 import {S} from "../HeaderMenu_Styles.ts"
-import {Menu, menuTitleProps} from "../menu/Menu.tsx";
-import React, {useState} from "react";
+import {Menu, MenuProps} from "../menu/Menu.tsx";
+import React, {useEffect, useState} from "react";
 
 
-export const MobileMenu: React.FC<menuTitleProps> = ({menuItem}: menuTitleProps) => {
-
+export const MobileMenu: React.FC<MenuProps> = ({menuItems}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
+    useEffect(() => {
+        if (!isOpen) return;
+
+        const previousOverflow = document.body.style.overflow;
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === "Escape") setIsOpen(false);
+        };
+
+        document.body.style.overflow = "hidden";
+        document.addEventListener("keydown", handleKeyDown);
+
+        return () => {
+            document.body.style.overflow = previousOverflow;
+            document.removeEventListener("keydown", handleKeyDown);
+        };
+    }, [isOpen]);
 
 
     return (
-        <S.MobileMenu>
-            <S.BurgerButton  onClick={() => setIsOpen(!isOpen)} isOpen={isOpen}>
+        <S.MobileMenu aria-label="Mobile navigation">
+            <S.BurgerButton
+                type="button"
+                onClick={() => setIsOpen(!isOpen)}
+                isOpen={isOpen}
+                aria-label={isOpen ? "Close navigation menu" : "Open navigation menu"}
+                aria-expanded={isOpen}
+                aria-controls="mobile-navigation-popup"
+            >
                 <span></span>
             </S.BurgerButton>
-            <S.MobileMenuPopup isOpen={isOpen}>
-                <Menu menuItem={menuItem}/>
+            <S.MobileMenuPopup
+                id="mobile-navigation-popup"
+                isOpen={isOpen}
+                aria-hidden={!isOpen}
+                onClick={(event) => {
+                    if (event.target === event.currentTarget) setIsOpen(false);
+                }}
+            >
+                <Menu menuItems={menuItems} onItemClick={() => setIsOpen(false)}/>
             </S.MobileMenuPopup>
         </S.MobileMenu>
     );

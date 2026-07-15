@@ -37,14 +37,13 @@ export const Contacts = () => {
             name: string
         }> = [
         {title: "Name", type: "text", name: "user_name"},
-        {title: "Subject", type: "text", name: "subject"},
         {title: "Email", type: "email", name: "email"}
     ]
 
     return (
-        <S.Contacts id="Contacts">
+        <S.Contacts id="contacts">
             <Container>
-                <Fade cascade={true} delay={350}>
+                <Fade triggerOnce duration={450} fraction={0.1}>
                     <FlexWrapper direction={"column"} justify={"center"} align={"center"}>
                         <SectionTitle title={"Contact me"}/>
                         <S.Form ref={form} onSubmit={sendEmail}>
@@ -65,4 +64,3 @@ export const Contacts = () => {
         </S.Contacts>
     )
 }
-

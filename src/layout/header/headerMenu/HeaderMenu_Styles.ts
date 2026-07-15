@@ -1,11 +1,6 @@
 import styled, {css} from "styled-components";
 
 const ListItem = styled.li`
-    transition: transform 0.2s;
-
-    &:hover {
-        transform: scale(1.1);
-    }
 `
 
 const Link = styled.a`
@@ -20,12 +15,17 @@ const Link = styled.a`
 // mobile menu
 
 const MobileMenu = styled.nav`
+    display: none;
 
+    @media screen and (max-width: 767px) {
+        display: block;
+    }
 `
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
-    background-color: rgba(245, 245, 245, 0.62);
+    background-color: rgba(249, 250, 255, 0.96);
+    backdrop-filter: blur(10px);
     top: 0;
     left: 0;
     right: 0;
@@ -49,6 +49,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
+    position: relative;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -76,7 +78,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         width: 18px;
         height: 2px;
         background-color: #25282b;
-        position: fixed;
+        position: absolute;
+        top: 13px;
+        left: 5px;
         transform: translateY(-6px);
         z-index: 99999;
 
@@ -91,7 +95,9 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
         width: 18px;
         height: 2px;
         background-color: #25282b;
-        position: fixed;
+        position: absolute;
+        top: 13px;
+        left: 5px;
         transform: translateY(6px);
         z-index: 99999;
 
@@ -106,6 +112,10 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 // desktop menu
 
 const DesktopMenu = styled.nav`
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+
     ul {
         display: flex;
         gap: 48px;

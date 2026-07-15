@@ -1,11 +1,11 @@
 import React from "react";
-import {Menu, menuTitleProps} from "../menu/Menu.tsx";
+import {Menu, MenuProps} from "../menu/Menu.tsx";
 import {S} from "../HeaderMenu_Styles.ts"
 
-export const DesktopMenu: React.FC<menuTitleProps> = ({menuItem}: menuTitleProps) => {
+export const DesktopMenu: React.FC<MenuProps> = ({menuItems}) => {
     return (
-        <S.DesktopMenu>
-            <Menu menuItem={menuItem}/>
+        <S.DesktopMenu aria-label="Primary navigation">
+            <Menu menuItems={menuItems}/>
 
         </S.DesktopMenu>
     );
