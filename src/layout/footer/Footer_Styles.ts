@@ -4,34 +4,53 @@ import {theme} from "../../styles/Theme.ts";
 const Footer = styled.footer`
     position: relative;
     padding: 54px 0 60px;
-    border-top: 1px solid #34405c;
-    color: #fff;
-    background: ${theme.colors.dark};
+    border-top: 1px solid ${theme.colors.finalLine};
+    color: ${theme.colors.finalText};
+    background: ${theme.colors.finalBG};
 `;
 
 const Social = styled.div`
     display: flex;
-    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 14px 28px;
 
     a {
-        display: grid;
-        place-items: center;
-        width: 44px;
-        height: 44px;
-        border: 1px solid #46536d;
-        border-radius: 4px;
-        color: #fff;
-        transition: border-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
+        position: relative;
+        display: inline-flex;
+        align-items: baseline;
+        gap: 5px;
+        padding: 6px 0;
+        font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        text-transform: lowercase;
+        color: ${theme.colors.finalMuted};
+        transition: color 0.2s ease;
 
-        svg {
-            display: block;
-            flex: none;
+        &::after {
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            left: 0;
+            height: 1px;
+            content: "";
+            background: ${theme.colors.hudKeyword};
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.2s ease;
         }
 
         &:hover {
-            border-color: ${theme.colors.signal};
-            color: ${theme.colors.signal};
-            transform: translateY(-3px);
+            color: ${theme.colors.hudKeyword};
+
+            &::after {
+                transform: scaleX(1);
+            }
+        }
+
+        span {
+            color: ${theme.colors.hudKeyword};
         }
     }
 `;
@@ -41,7 +60,7 @@ const Reserved = styled.small`
     font-weight: 400;
     font-size: 13px;
     text-align: center;
-    color: #8290aa;
+    color: ${theme.colors.finalMuted};
 `;
 
 export const S = {Footer, Social, Reserved};

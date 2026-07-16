@@ -4,7 +4,6 @@ import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 import {PhotoBlock} from "../../../components/photoBlock/PhotoBlock.tsx";
 import React from "react";
 import {S} from "./AboutMe_Styles.ts";
-import Typewriter from "typewriter-effect";
 
 
 export const AboutMe: React.FC = () => {
@@ -16,18 +15,7 @@ export const AboutMe: React.FC = () => {
                         <S.InfoContent>
                             <S.StyledProfession>
                                 <S.StatusDot aria-hidden="true"/>
-                                <S.TypewriterWrap>
-                                    <span>Frontend developer · open to work</span>
-                                    <Typewriter
-                                        options={{
-                                            strings: ["Frontend developer · open to work"],
-                                            autoStart: true,
-                                            loop: true,
-                                            delay: 55,
-                                            deleteSpeed: 25,
-                                        }}
-                                    />
-                                </S.TypewriterWrap>
+                                <span>Frontend developer · open to work</span>
                             </S.StyledProfession>
                             <S.StyledSectionTitle>
                                 Hello, my name is <em>Yaroslau</em>

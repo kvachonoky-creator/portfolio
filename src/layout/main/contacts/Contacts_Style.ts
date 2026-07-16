@@ -4,15 +4,15 @@ import styled from "styled-components";
 const Contacts = styled.section`
     position: relative;
     padding: 120px 0;
-    color: #fff;
-    background: ${theme.colors.dark};
+    color: ${theme.colors.finalText};
+    background: ${theme.colors.finalBG};
 
     h2 {
-        color: #fff;
+        color: ${theme.colors.finalText};
     }
 
     h2::before {
-        color: #8da0ff;
+        color: ${theme.colors.hudKeyword};
     }
 `;
 
@@ -42,7 +42,7 @@ const ContactIntro = styled.div`
         margin-bottom: 32px;
         font-size: 18px;
         line-height: 1.65;
-        color: #aebbd0;
+        color: ${theme.colors.finalMuted};
     }
 
 `;
@@ -55,7 +55,7 @@ const Availability = styled.div`
     font-size: 11px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #aebbd0;
+    color: ${theme.colors.finalMuted};
 
     span {
         width: 8px;
@@ -71,17 +71,17 @@ const Form = styled.form`
     gap: 22px;
     width: 100%;
     padding: clamp(24px, 4vw, 44px);
-    border: 1px solid #34405c;
+    border: 1px solid ${theme.colors.finalLine};
     border-radius: 8px;
-    background: #121d39;
+    background: ${theme.colors.finalSurface};
 `;
 
 const fieldStyles = `
     width: 100%;
     border: 0;
-    border-bottom: 1px solid #52617e;
+    border-bottom: 1px solid ${theme.colors.finalLine};
     border-radius: 0;
-    color: #fff;
+    color: ${theme.colors.finalText};
     background: transparent;
     outline: none;
 `;
@@ -105,7 +105,7 @@ const Label = styled.label`
     font-size: 11px;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    color: #aebbd0;
+    color: ${theme.colors.finalMuted};
 `;
 
 const Textarea = styled.textarea`
@@ -135,7 +135,7 @@ const FormFooter = styled.div`
 const FormStatus = styled.span<{$status: "idle" | "sending" | "success" | "error"}>`
     min-height: 20px;
     font-size: 13px;
-    color: ${({$status}) => $status === "error" ? "#ff9872" : "#aebbd0"};
+    color: ${({$status}) => $status === "error" ? theme.colors.signal : theme.colors.finalMuted};
 `;
 
 const Button = styled.button`
@@ -149,13 +149,13 @@ const Button = styled.button`
     font-weight: 500;
     letter-spacing: 0.06em;
     text-transform: uppercase;
-    color: ${theme.colors.dark};
+    color: ${theme.colors.finalBG};
     background: ${theme.colors.signal};
     cursor: pointer;
     transition: transform 0.2s ease, background-color 0.2s ease;
 
     &:hover:not(:disabled) {
-        background: #ff8255;
+        background: color-mix(in srgb, ${theme.colors.signal} 88%, white);
         transform: translateY(-2px);
     }
 

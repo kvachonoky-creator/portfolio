@@ -53,7 +53,7 @@ const StyledLinkButton = styled.a`
     &:hover {
         background-color: ${theme.colors.accent};
         border-color: ${theme.colors.accent};
-        color: white;
+        color: ${theme.colors.secondaryBG};
         transform: translateY(-2px);
     }
 `;

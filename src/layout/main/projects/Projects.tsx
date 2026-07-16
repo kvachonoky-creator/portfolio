@@ -15,6 +15,7 @@ export const Projects = () => {
                         <ProjectCard
                             key={project.title}
                             src={project.image}
+                            darkSrc={project.darkImage}
                             projectTitle={project.title}
                             projectText={project.description}
                             href={project.url}

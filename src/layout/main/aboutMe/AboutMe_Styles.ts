@@ -25,6 +25,7 @@ const HeroContent = styled.div`
     gap: clamp(40px, 6vw, 88px);
     align-items: center;
     position: relative;
+    z-index: 1;
     width: 100%;
     min-width: 0;
     max-width: 100%;
@@ -85,25 +86,7 @@ const StatusDot = styled.span`
     height: 9px;
     border-radius: 50%;
     background: ${theme.colors.signal};
-    box-shadow: 0 0 0 5px rgba(255, 107, 53, 0.15);
-`;
-
-const TypewriterWrap = styled.span`
-    min-width: 0;
-
-    > span {
-        display: none;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-        > span {
-            display: inline;
-        }
-
-        .Typewriter {
-            display: none;
-        }
-    }
+    box-shadow: 0 0 0 5px ${theme.colors.signalSoft};
 `;
 
 const StyledSectionTitle = styled.h1`
@@ -131,7 +114,6 @@ export const S = {
     Actions,
     StyledProfession,
     StatusDot,
-    TypewriterWrap,
     StyledSectionTitle,
     BlockInfo,
 };

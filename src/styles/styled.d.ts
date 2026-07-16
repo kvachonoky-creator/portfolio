@@ -1,0 +1,9 @@
+import "styled-components";
+import type {AppTheme} from "./Theme.ts";
+
+declare module "styled-components" {
+    export interface DefaultTheme {
+        mode: AppTheme["mode"];
+        colors: AppTheme["colors"];
+    }
+}

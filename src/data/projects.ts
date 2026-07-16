@@ -1,16 +1,15 @@
-import tmdbPreview from "../assets/img/project-tmdb.png";
-import taskTrackerPreview from "../assets/img/project-task-tracker.png";
-import projectThree from "../assets/img/project-3.jpg";
+import tmdbPreview from "../assets/img/project-tmdb.webp";
+import tmdbDarkPreview from "../assets/img/project-tmdb-dark.webp";
+import taskTrackerPreview from "../assets/img/project-task-tracker.webp";
+import taskTrackerDarkPreview from "../assets/img/project-task-tracker-dark.webp";
 
 export type ProjectItem = {
     title: string;
     description: string;
     image: string;
+    darkImage: string;
     url?: string;
 };
-
-const placeholderDescription =
-    "I created this personal project in order to show how to create an interface in Figma using a portfolio as an example.";
 
 export const projects: ReadonlyArray<ProjectItem> = [
     {
@@ -18,6 +17,7 @@ export const projects: ReadonlyArray<ProjectItem> = [
         description:
             "I built a movie discovery app powered by the TMDB API. Users can search and filter movies, explore detailed information, save favorites, and switch between light and dark themes.",
         image: tmdbPreview,
+        darkImage: tmdbDarkPreview,
         url: "https://github.com/yarek-dev/TMDB",
     },
     {
@@ -25,7 +25,7 @@ export const projects: ReadonlyArray<ProjectItem> = [
         description:
             "I built a task management app with authentication. Users can create, edit, filter, and reorder task lists, manage tasks with pagination, and switch between light and dark themes.",
         image: taskTrackerPreview,
+        darkImage: taskTrackerDarkPreview,
         url: "https://github.com/yarek-dev/Task_tracker",
     },
-    {title: "Project Name 3", description: placeholderDescription, image: projectThree},
 ];

@@ -4,7 +4,7 @@ import {theme} from "../../../styles/Theme.ts";
 const ListItem = styled.li`
 `
 
-const Link = styled.a`
+const Link = styled.a<{$isActive: boolean}>`
     position: relative;
     font-family: Raleway, sans-serif;
     font-weight: 500;
@@ -22,8 +22,8 @@ const Link = styled.a`
         height: 2px;
         content: "";
         background: ${theme.colors.signal};
-        transform: scaleX(0);
-        transform-origin: right;
+        transform: scaleX(${({$isActive}) => $isActive ? 1 : 0});
+        transform-origin: left;
         transition: transform 0.2s ease;
     }
 
@@ -46,7 +46,7 @@ const MobileMenu = styled.nav`
 
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
-    background-color: rgba(233, 238, 246, 0.97);
+    background-color: ${theme.colors.menuBG};
     backdrop-filter: blur(18px);
     top: 0;
     left: 0;

@@ -1,32 +1,35 @@
 import styled from "styled-components";
 import {Fade} from "react-awesome-reveal";
 import {SectionTitle} from "../../../components/sectionTitle/SectionTitle.tsx";
-import {Icons} from "../../../components/icons/Icons.tsx";
 import {Container} from "../../../components/container/Container.ts";
 import {theme} from "../../../styles/Theme.ts";
-import {skills} from "../../../data/skills.ts";
+import {skillGroups} from "../../../data/skills.ts";
 
 export const Skills = () => {
     return (
         <StyledSkills id="skills">
             <Container>
                 <SectionTitle title="Skills"/>
-                <SkillGrid>
-                    {skills.map((skill) => (
-                        <Fade key={skill.label} triggerOnce duration={450} fraction={0.15}>
-                            <SkillItem title={skill.label} aria-label={skill.label}>
-                                <IconFrame>
-                                    {skill.asset ? (
-                                        <BrandIcon $source={skill.asset} $color={skill.color}/>
-                                    ) : (
-                                        <Icons iconId={skill.iconId!} aria-hidden={true}/>
-                                    )}
-                                </IconFrame>
-                                <span>{skill.label}</span>
-                            </SkillItem>
-                        </Fade>
-                    ))}
-                </SkillGrid>
+                <Fade triggerOnce duration={480} fraction={0.1} style={{width: "100%"}}>
+                    <SkillMatrix>
+                        {skillGroups.map((group) => (
+                            <SkillGroup key={group.label}>
+                                <GroupHeading>
+                                    <span>{group.label}</span>
+                                    <small>{String(group.skills.length).padStart(2, "0")}</small>
+                                </GroupHeading>
+                                <SkillGrid>
+                                    {group.skills.map((skill) => (
+                                        <SkillItem key={skill.label}>
+                                            <SkillCode aria-hidden="true">{skill.code}</SkillCode>
+                                            <span>{skill.label}</span>
+                                        </SkillItem>
+                                    ))}
+                                </SkillGrid>
+                            </SkillGroup>
+                        ))}
+                    </SkillMatrix>
+                </Fade>
             </Container>
         </StyledSkills>
     );
@@ -36,37 +39,59 @@ const StyledSkills = styled.section`
     position: relative;
     padding: 112px 0;
     border-block: 1px solid ${theme.colors.line};
-    background: rgba(251, 252, 254, 0.7);
+    background: color-mix(in srgb, ${theme.colors.secondaryBG} 70%, transparent);
 
     @media ${theme.media.mobile} {
         padding: 90px 0 80px;
     }
 `;
 
-const SkillGrid = styled.div`
+const SkillMatrix = styled.div`
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-
-    > div {
-        width: 100%;
-    }
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 52px clamp(28px, 5vw, 72px);
 
     @media ${theme.media.tablet} {
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    @media ${theme.media.mobile} {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: 1fr;
+        gap: 42px;
     }
 `;
 
-const SkillItem = styled.div`
+const SkillGroup = styled.div`
+    min-width: 0;
+`;
+
+const GroupHeading = styled.h3`
     display: flex;
+    justify-content: space-between;
+    margin-bottom: 14px;
+    padding-top: 13px;
+    border-top: 1px solid ${theme.colors.frame};
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: ${theme.colors.accent};
+
+    small {
+        font: inherit;
+        color: ${theme.colors.textFont};
+    }
+`;
+
+const SkillGrid = styled.div`
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+`;
+
+const SkillItem = styled.div`
+    display: grid;
+    grid-template-columns: 46px minmax(0, 1fr);
     align-items: center;
-    gap: 14px;
-    min-height: 76px;
-    padding: 12px 16px;
+    min-height: 66px;
+    overflow: hidden;
     border: 1px solid ${theme.colors.line};
     border-radius: 4px;
     font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
@@ -75,36 +100,34 @@ const SkillItem = styled.div`
     background: ${theme.colors.secondaryBG};
     transition: border-color 0.2s ease, transform 0.2s ease;
 
+    > span:last-child {
+        padding: 10px 12px;
+        line-height: 1.35;
+    }
+
     &:hover {
         border-color: ${theme.colors.accent};
-        transform: translateY(-3px);
+        transform: translateY(-2px);
     }
 
-    @media ${theme.media.mobile} {
-        flex-direction: column;
-        justify-content: center;
-        gap: 8px;
-        min-height: 104px;
+    @media screen and (max-width: 390px) {
+        grid-template-columns: 38px minmax(0, 1fr);
+        font-size: 11px;
+
+        > span:last-child {
+            padding-inline: 8px;
+        }
     }
 `;
 
-const IconFrame = styled.span`
+const SkillCode = styled.span`
     display: grid;
-    flex: 0 0 38px;
+    align-self: stretch;
     place-items: center;
-    width: 38px;
-    height: 38px;
-
-    svg {
-        width: 34px;
-        height: 34px;
-    }
-`;
-
-const BrandIcon = styled.span<{$source: string; $color?: string}>`
-    display: block;
-    width: 32px;
-    height: 32px;
-    background-color: ${({$color}) => $color ?? "#000"};
-    mask: url("${({$source}) => $source}") center / contain no-repeat;
+    border-right: 1px solid ${theme.colors.line};
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    color: ${theme.colors.accent};
+    background: ${theme.colors.accentSoft};
 `;

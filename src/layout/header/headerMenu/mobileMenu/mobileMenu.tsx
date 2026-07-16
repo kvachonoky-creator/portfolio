@@ -3,7 +3,7 @@ import {Menu, MenuProps} from "../menu/Menu.tsx";
 import React, {useEffect, useState} from "react";
 
 
-export const MobileMenu: React.FC<MenuProps> = ({menuItems}) => {
+export const MobileMenu: React.FC<MenuProps> = ({menuItems, activeHref}) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     useEffect(() => {
@@ -44,7 +44,7 @@ export const MobileMenu: React.FC<MenuProps> = ({menuItems}) => {
                     if (event.target === event.currentTarget) setIsOpen(false);
                 }}
             >
-                <Menu menuItems={menuItems} onItemClick={() => setIsOpen(false)}/>
+                <Menu menuItems={menuItems} activeHref={activeHref} onItemClick={() => setIsOpen(false)}/>
             </S.MobileMenuPopup>
         </S.MobileMenu>
     );
