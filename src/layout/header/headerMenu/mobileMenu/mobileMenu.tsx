@@ -45,6 +45,15 @@ export const MobileMenu: React.FC<MenuProps> = ({menuItems, activeHref}) => {
                 }}
             >
                 <Menu menuItems={menuItems} activeHref={activeHref} onItemClick={() => setIsOpen(false)}/>
+                <S.CvLink
+                    href="/yaroslav-kvachonak-cv.pdf"
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label="Open CV as PDF"
+                    onClick={() => setIsOpen(false)}
+                >
+                    CV <span aria-hidden="true">↗</span>
+                </S.CvLink>
             </S.MobileMenuPopup>
         </S.MobileMenu>
     );

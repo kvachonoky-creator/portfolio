@@ -19,6 +19,9 @@ export const Footer: React.FC = () => {
                         <a href="https://github.com/yarek-dev" target="_blank" rel="noreferrer">
                             github <span aria-hidden="true">↗</span>
                         </a>
+                        <a href="/yaroslav-kvachonak-cv.pdf" target="_blank" rel="noreferrer">
+                            cv.pdf <span aria-hidden="true">↗</span>
+                        </a>
                     </S.Social>
                     <S.Reserved>© {new Date().getFullYear()} Yaroslau Kvachonak · Built with React and TypeScript.</S.Reserved>
                 </FlexWrapper>
