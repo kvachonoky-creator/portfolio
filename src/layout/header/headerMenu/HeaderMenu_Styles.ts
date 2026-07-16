@@ -33,31 +33,6 @@ const Link = styled.a<{$isActive: boolean}>`
     }
 `;
 
-const CvLink = styled.a`
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    min-height: 34px;
-    padding: 0 10px;
-    border: 1px solid ${theme.colors.line};
-    border-radius: 4px;
-    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
-    font-size: 10px;
-    font-weight: 600;
-    line-height: 1;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    color: ${theme.colors.accent};
-    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease;
-
-    &:hover {
-        border-color: ${theme.colors.accent};
-        color: ${theme.colors.secondaryBG};
-        background: ${theme.colors.accent};
-    }
-`;
-
-
 // mobile menu
 
 const MobileMenu = styled.nav`
@@ -82,10 +57,8 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 44px;
     `}
     ul {
         display: flex;
@@ -97,11 +70,6 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
         font-size: 22px;
     }
 
-    ${CvLink} {
-        min-height: 42px;
-        padding: 0 16px;
-        font-size: 13px;
-    }
 `;
 
 
@@ -169,10 +137,6 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 // desktop menu
 
 const DesktopMenu = styled.nav`
-    display: flex;
-    align-items: center;
-    gap: 24px;
-
     @media screen and (max-width: 767px) {
         display: none;
     }
@@ -186,7 +150,6 @@ const DesktopMenu = styled.nav`
 export const S = {
     ListItem,
     Link,
-    CvLink,
     MobileMenu,
     MobileMenuPopup,
     BurgerButton,

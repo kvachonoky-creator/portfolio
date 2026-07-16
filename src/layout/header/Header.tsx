@@ -82,6 +82,14 @@ export const Header: React.FC<HeaderProps> = ({themeMode, onThemeToggle}) => {
                     </S.LogoLink>
                     <S.HeaderActions>
                         <DesktopMenu menuItems={navigationItems} activeHref={activeHref}/>
+                        <S.CvLink
+                            href="/yaroslav-kvachonak-cv.pdf"
+                            target="_blank"
+                            rel="noreferrer"
+                            aria-label="Open CV as PDF"
+                        >
+                            CV <span aria-hidden="true">↗</span>
+                        </S.CvLink>
                         <S.ThemeToggle
                             type="button"
                             onClick={onThemeToggle}

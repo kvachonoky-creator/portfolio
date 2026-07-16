@@ -54,6 +54,33 @@ const HeaderActions = styled.div`
     gap: 18px;
 `;
 
+const CvLink = styled.a`
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    height: 40px;
+    padding: 0 11px;
+    border: 1px solid ${theme.colors.line};
+    border-radius: 4px;
+    font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: ${theme.colors.accent};
+    background: ${theme.colors.secondaryBG};
+    transition: color 0.2s ease, border-color 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+        border-color: ${theme.colors.accent};
+        color: ${theme.colors.secondaryBG};
+        background: ${theme.colors.accent};
+        transform: translateY(-1px);
+    }
+`;
+
 const ThemeToggle = styled.button`
     display: inline-flex;
     align-items: center;
@@ -114,6 +141,7 @@ export const S = {
     LogoMark,
     LogoName,
     HeaderActions,
+    CvLink,
     ThemeToggle,
     ThemeLabel,
 };
