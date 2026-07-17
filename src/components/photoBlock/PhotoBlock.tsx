@@ -1,6 +1,6 @@
 import photo from "../../assets/img/photo-optimized.webp"
 import {S} from "./PhotoBlock_Styles.ts"
-import React, {useState} from "react";
+import {useState, type KeyboardEvent} from "react";
 
 type DeveloperMode =
     | "react"
@@ -42,18 +42,28 @@ const DeveloperSnippet = ({mode}: {mode: DeveloperMode}) => {
     );
 };
 
-export const PhotoBlock: React.FC = () => {
+export const PhotoBlock = () => {
     const [mode, setMode] = useState<DeveloperMode>("react");
 
-    const selectModeByKeyboard = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
-        let nextIndex: number | undefined;
+    const selectModeByKeyboard = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+        let nextIndex: number;
 
-        if (event.key === "ArrowRight") nextIndex = (index + 1) % developerModes.length;
-        if (event.key === "ArrowLeft") nextIndex = (index - 1 + developerModes.length) % developerModes.length;
-        if (event.key === "Home") nextIndex = 0;
-        if (event.key === "End") nextIndex = developerModes.length - 1;
-
-        if (nextIndex === undefined) return;
+        switch (event.key) {
+            case "ArrowRight":
+                nextIndex = (index + 1) % developerModes.length;
+                break;
+            case "ArrowLeft":
+                nextIndex = (index - 1 + developerModes.length) % developerModes.length;
+                break;
+            case "Home":
+                nextIndex = 0;
+                break;
+            case "End":
+                nextIndex = developerModes.length - 1;
+                break;
+            default:
+                return;
+        }
 
         event.preventDefault();
         const nextMode = developerModes[nextIndex];

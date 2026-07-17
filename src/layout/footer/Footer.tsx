@@ -1,10 +1,9 @@
 import {Container} from "../../components/container/Container.ts";
 import {FlexWrapper} from "../../components/flexWrapper/FlexWrapper.tsx";
 import {S} from "./Footer_Styles.ts"
-import React from "react";
 
 
-export const Footer: React.FC = () => {
+export const Footer = () => {
     return (
         <S.Footer>
             <Container>

@@ -66,7 +66,7 @@ const CardFrame = styled.div`
     }
 `;
 
-const Picture = styled.img<{$visible: boolean}>`
+const Picture = styled.img<{ $visible: boolean }>`
     position: absolute;
     inset: 0;
     width: 100%;
@@ -148,4 +148,13 @@ const Wrapper = styled.div`
     }
 `;
 
-export const S = {CardFrame, Article, PreviewFrame, Picture, ProjectName, ProjectLabel, ComingSoon, Wrapper};
+export const S = {
+    CardFrame,
+    Article,
+    PreviewFrame,
+    Picture,
+    ProjectName,
+    ProjectLabel,
+    ComingSoon,
+    Wrapper
+};

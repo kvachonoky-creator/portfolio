@@ -17,16 +17,12 @@ export const useColorTheme = () => {
     const [themeMode, setThemeMode] = useState<ThemeMode>(getInitialTheme);
 
     useEffect(() => {
-        document.documentElement.dataset.theme = themeMode;
         document.documentElement.style.colorScheme = themeMode;
+        window.localStorage.setItem(storageKey, themeMode);
     }, [themeMode]);
 
     const toggleTheme = () => {
-        setThemeMode((currentTheme) => {
-            const nextTheme = currentTheme === "light" ? "dark" : "light";
-            window.localStorage.setItem(storageKey, nextTheme);
-            return nextTheme;
-        });
+        setThemeMode((currentTheme) => currentTheme === "light" ? "dark" : "light");
     };
 
     return {themeMode, toggleTheme};

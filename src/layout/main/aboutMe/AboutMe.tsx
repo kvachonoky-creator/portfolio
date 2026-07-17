@@ -2,11 +2,10 @@ import {LinkButton} from "../../../components/linkButton/LinkButton.tsx";
 import {Container} from "../../../components/container/Container.ts";
 import {SectionText} from "../../../components/sectionText/SectionText.tsx";
 import {PhotoBlock} from "../../../components/photoBlock/PhotoBlock.tsx";
-import React from "react";
 import {S} from "./AboutMe_Styles.ts";
 
 
-export const AboutMe: React.FC = () => {
+export const AboutMe = () => {
     return (
         <S.StyledAboutMe id="about">
             <Container>

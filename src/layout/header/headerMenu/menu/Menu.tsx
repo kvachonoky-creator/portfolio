@@ -1,4 +1,3 @@
-import React from 'react';
 import {S} from "../HeaderMenu_Styles.ts"
 import type {NavigationItem} from "../../../../data/navigation.ts";
 
@@ -8,7 +7,7 @@ export type MenuProps = {
     activeHref?: string;
 }
 
-export const Menu: React.FC<MenuProps> = ({menuItems, onItemClick, activeHref}) => {
+export const Menu = ({menuItems, onItemClick, activeHref}: MenuProps) => {
         return (
             <ul>
                 {menuItems.map((item) => (

@@ -1,9 +1,9 @@
 import {S} from "../HeaderMenu_Styles.ts"
 import {Menu, MenuProps} from "../menu/Menu.tsx";
-import React, {useEffect, useState} from "react";
+import {useEffect, useState} from "react";
 
 
-export const MobileMenu: React.FC<MenuProps> = ({menuItems, activeHref}) => {
+export const MobileMenu = ({menuItems, activeHref}: MenuProps) => {
     const [isOpen, setIsOpen] = useState<boolean>(false)
 
     useEffect(() => {
